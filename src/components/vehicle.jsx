@@ -2,13 +2,11 @@ import { Image } from "./image";
 import VehicleCard from "./VehicleCard";
 import useFetch from "../hooks/useFetch";
 
-export const Gallery = (props) => {
+export const Vehicles = (props) => {
   const { data, isLoading } = useFetch("http://127.0.0.1:8000/api/vehicles");
 
-  console.log(data?.Vehicle);
-
   return (
-    <div id="portfolio" className="text-center">
+    <div id="vehicles" className="text-center">
       <div className="container">
         <div className="section-title">
           <h2>Vehicles</h2>
