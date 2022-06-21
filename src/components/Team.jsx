@@ -3,8 +3,6 @@ import useFetch from "../hooks/useFetch";
 export const Team = (props) => {
   const { data, isLoading } = useFetch("http://127.0.0.1:8000/api/staff");
 
-  console.log(data?.staff);
-
   return (
     <div id="team" className="text-center">
       <div className="container">

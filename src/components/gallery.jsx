@@ -1,33 +1,29 @@
 import { Image } from "./image";
+import VehicleCard from "./VehicleCard";
+import useFetch from "../hooks/useFetch";
 
 export const Gallery = (props) => {
+  const { data, isLoading } = useFetch("http://127.0.0.1:8000/api/vehicles");
+
+  console.log(data?.Vehicle);
+
   return (
     <div id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Gallery</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+          <h2>Vehicles</h2>
         </div>
-        <div className="row">
-          <div className="portfolio-items">
-            {props.data
-              ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
-                  </div>
-                ))
-              : "Loading..."}
-          </div>
+        <div className="container">
+          {data?.Vehicle.map((item) => (
+            <VehicleCard
+              brand={item.brand}
+              image={item.v_image}
+              model={item.model}
+              yom={item.year_manufacture}
+              mileage={item.mileage}
+              price={item.unit_price}
+            />
+          ))}
         </div>
       </div>
     </div>
