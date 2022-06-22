@@ -1,6 +1,14 @@
 import React from "react";
 
-const VehicleCard = ({ brand, image, model, yom, mileage, price }) => {
+const VehicleCard = ({
+  brand,
+  image,
+  model,
+  yom,
+  mileage,
+  price,
+  availability,
+}) => {
   return (
     <div className="col-md-4">
       <div className="card">
@@ -17,6 +25,14 @@ const VehicleCard = ({ brand, image, model, yom, mileage, price }) => {
           <p>Year Of Manufacture : {yom}</p>
           <p>Mileage : {mileage}</p>
           <p>Price : {price}</p>
+          <p
+            style={{
+              fontWeight: "bold",
+              color: availability === "true" ? "green" : "red",
+            }}
+          >
+            {availability === "true" ? "For Sale" : "Sold Out"}
+          </p>
         </div>
       </div>
     </div>
