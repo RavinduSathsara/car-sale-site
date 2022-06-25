@@ -10,42 +10,183 @@ export const Vehicles = (props) => {
   const cars = data?.Vehicle.filter((car) => {
     return car.make === "Car";
   });
+  const petrolCars = cars?.filter((petrolCar) => {
+    return petrolCar.fuel_type === "Petrol";
+  });
+  const dieselCars = cars?.filter((dieselCar) => {
+    return dieselCar.fuel_type === "Diesel";
+  });
 
   const jeep = data?.Vehicle.filter((jeep) => {
     return jeep.make === "Jeep";
   });
+  const petrolJeeps = jeep?.filter((petrolJeep) => {
+    return petrolJeep.fuel_type === "Petrol";
+  });
+  const dieselJeeps = jeep?.filter((dieselJeep) => {
+    return dieselJeep.fuel_type === "Diesel";
+  });
+  console.log("dd", petrolJeeps);
+  console.log("pp", dieselJeeps);
+  console.log("ab", jeep);
 
   const vans = data?.Vehicle.filter((van) => {
     return van.make === "Van";
   });
-
+  const Diesel = data?.Vehicle.filter((diesel) => {
+    return diesel.fuel_type === "Diesel";
+  });
+  const Petrol = data?.Vehicle.filter((petrol) => {
+    return petrol.fuel_type === "Petrol";
+  });
+  const first = data?.Vehicle.filter((first) => {
+    return first.ownership === "First Owner";
+  });
+  const second = data?.Vehicle.filter((second) => {
+    return second.ownership === "Second Owner";
+  });
+  const third = data?.Vehicle.filter((third) => {
+    return third.ownership === "Third Owner";
+  });
   return (
     <div id="vehicles" className="text-center">
-      <button
-        onClick={() => {
-          setMakeFilter("Car");
-        }}
-      >
-        Car
-      </button>
-      <button
-        onClick={() => {
-          setMakeFilter("Van");
-        }}
-      >
-        Van
-      </button>
-      <button
-        onClick={() => {
-          setMakeFilter("Jeep");
-        }}
-      >
-        Jeep
-      </button>
       <div className="container">
         <div className="section-title">
           <h2>Vehicles</h2>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              Make <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("");
+                  }}
+                >
+                  All
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Car");
+                  }}
+                >
+                  Car
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Van");
+                  }}
+                >
+                  Van
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Jeep");
+                  }}
+                >
+                  Jeep
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group " style={{ margin: "3px" }}>
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              Fuel Type <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("");
+                  }}
+                >
+                  All
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Diesel");
+                  }}
+                >
+                  diesel
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Petrol");
+                  }}
+                >
+                  petrol
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group " style={{ margin: "3px" }}>
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              OwnerShip <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("");
+                  }}
+                >
+                  All
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("First Owner");
+                  }}
+                >
+                  First Owner
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Second Owner");
+                  }}
+                >
+                  Second Owner
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => {
+                    setMakeFilter("Third Owner");
+                  }}
+                >
+                  Third Owner
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div className="container">
           {makeFilter === ""
             ? data?.Vehicle.map((item) => (
@@ -96,6 +237,131 @@ export const Vehicles = (props) => {
                 />
               ))
             : ""}
+          {makeFilter === "Diesel"
+            ? Diesel.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : makeFilter === "Petrol"
+            ? Petrol.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : ""}
+          {makeFilter === "First Owner"
+            ? first.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : makeFilter === "Second Owner"
+            ? second.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : makeFilter === "Third Owner"
+            ? third.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : ""}
+          {/* {makeFilter === "petrol"
+            ? petrolCars.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : ""}{" "}
+          {makeFilter === "Petrol"
+            ? petrolCars.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : makeFilter === "Diesel"
+            ? dieselCars.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : ""}
+          {makeFilter === "Petrol"
+            ? petrolJeeps.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : makeFilter === "Diesel"
+            ? dieselJeeps.map((item) => (
+                <VehicleCard
+                  brand={item.brand}
+                  image={item.v_image}
+                  model={item.model}
+                  yom={item.year_manufacture}
+                  mileage={item.mileage}
+                  price={item.unit_price}
+                  availability={item.availability}
+                />
+              ))
+            : ""} */}
         </div>
       </div>
     </div>
