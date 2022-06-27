@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import { Navigation } from "./components/navigation";
-import { Header } from "./components/header";
-import { Features } from "./components/features";
-import { About } from "./components/about";
-import { Services } from "./components/services";
-import { Vehicles } from "./components/vehicle";
-import { Testimonials } from "./components/testimonials";
-import { Team } from "./components/Team";
-import { Contact } from "./components/contact";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import SwapDeal from "./components/Forms/SwapDeal";
+import Layout from "./Layout";
+import TestRun from "./components/Forms/TestRun";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -25,17 +21,13 @@ const App = () => {
 
   return (
     <div>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
-      {/* <About data={landingPageData.About} /> */}
-      <Services data={landingPageData.Services} />
-      <Vehicles data={landingPageData.Vehicles} />
-
-      <Testimonials data={landingPageData.Testimonials} />
-      <Team data={landingPageData.Team} />
-      <About data={landingPageData.About} />
-      <Contact data={landingPageData.Contact} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/swap-deal" element={<SwapDeal />} />
+          <Route path="/test-run" element={<TestRun />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
