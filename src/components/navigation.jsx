@@ -62,6 +62,11 @@ export const Navigation = (props) => {
                       Test Run
                     </Link>
                   </li>
+                  <li class="nav-item">
+                    <Link target="_blank" to="/Inquiry">
+                      Inquiry
+                    </Link>
+                  </li>
                 </ul>
               </li>
               <li>
