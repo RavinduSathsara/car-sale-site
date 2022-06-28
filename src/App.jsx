@@ -7,6 +7,7 @@ import "./App.css";
 import SwapDeal from "./components/Forms/SwapDeal";
 import Layout from "./Layout";
 import TestRun from "./components/Forms/TestRun";
+import Inquiry from "./components/Forms/Inquiry";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/" element={<Layout />} />
           <Route path="/swap-deal" element={<SwapDeal />} />
           <Route path="/test-run" element={<TestRun />} />
+          <Route path="/Inquiry" element={<Inquiry />} />
         </Routes>
       </BrowserRouter>
     </div>
