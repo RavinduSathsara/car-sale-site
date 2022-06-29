@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import axios from "axios";
 const SwapDeal = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,6 +14,7 @@ const SwapDeal = () => {
   const [cusOwnership, setCusOwnership] = useState("");
   const [chassisNo, setChassisNo] = useState("");
   const [cusFuelType, setCusFuelType] = useState("");
+  const [mileage, setMileage] = useState("");
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [make, setMake] = useState("");
@@ -24,6 +25,62 @@ const SwapDeal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .post("http://127.0.0.1:8000/api/swapvehicle", {
+        name: `${name}`,
+        contact: `${contact}`,
+        email: `${email}`,
+        profession: `${profession}`,
+        address: `${address}`,
+        cus_make: `${cusMake}`,
+        cus_brand: `${cusBrand}`,
+        cus_model: `${cusModel}`,
+        cus_year_manufacture: `${cusYearManufacture}`,
+        year_registration: `${yearRegistration}`,
+        cus_ownership: `${cusOwnership}`,
+        chassis_no: `${chassisNo}`,
+        cus_fuel_type: `${cusFuelType}`,
+        mileage: `${mileage}`,
+        remarks: `${remark}`,
+        brand: `${brand}`,
+        model: `${model}`,
+        make: `${make}`,
+        ownership: `${ownership}`,
+        year_manufacture: `${yearManufacture}`,
+        fuel_type: `${fuelType}`,
+        decision: 0,
+      })
+      .then(() => {
+        alert("add Swap");
+      })
+
+      .catch((e) => {
+        alert(e.response.data.message);
+      });
+  };
+  const handleReset = (event) => {
+    event.preventDefault();
+    setName("");
+    setEmail("");
+    setContact("");
+    setProfession("");
+    setAddress("");
+    setCusMake("");
+    setCusBrand("");
+    setCusModel("");
+    setCusYearManufacture("");
+    setYearRegistration("");
+    setCusOwnership("");
+    setChassisNo("");
+    setCusFuelType("");
+    setMileage("");
+    setRemark("");
+    setBrand("");
+    setModel("");
+    setMake("");
+    setOwnership("");
+    setYearManufacture("");
+    setFuelType("");
   };
   return (
     <div>
@@ -65,7 +122,7 @@ const SwapDeal = () => {
                 <h3 style={{ textAlign: "center", marginTop: "98px" }}>
                   Personal
                 </h3>
-                <form name="sentMessage" validate onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} onReset={handleReset}>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
@@ -277,12 +334,28 @@ const SwapDeal = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          id="mileage"
+                          name="mileage"
+                          className="form-control"
+                          placeholder="Mileage"
+                          value={mileage}
+                          onChange={(e) => setMileage(e.target.value)}
+                        />
 
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                  </div>
                   <div id="success"></div>
                 </form>
               </div>
             </div>
-            <form>
+            <form onSubmit={handleSubmit} onReset={handleReset}>
               <div className="col-md-4 col-md-offset-1 contact-info">
                 <div className="contact-item" style={{ textAlign: "center" }}>
                   <h3>Expecting</h3>
@@ -386,7 +459,7 @@ const SwapDeal = () => {
                 </div>
               </div>
             </form>
-            <form>
+            <form onSubmit={handleSubmit} onReset={handleReset}>
               {" "}
               <div className="form-group">
                 <textarea
