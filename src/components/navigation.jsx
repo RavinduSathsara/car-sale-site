@@ -46,7 +46,7 @@ export const Navigation = (props) => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Dropdown <span class="caret"></span>
+                  Services<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   <li class="nav-item">
