@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import axios from "axios";
 
 const initialState = {
   name: "",
@@ -29,8 +30,8 @@ export const Inquiry = (props) => {
   const [insurance, setInsurance] = useState("");
   const [remarks, setRemarks] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleReset = (event) => {
+    event.preventDefault();
     setName("");
     setContact("");
     setEmail("");
@@ -44,6 +45,45 @@ export const Inquiry = (props) => {
     setInsurance("");
     setRemarks("");
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://127.0.0.1:8000/api/vehicle_inquiry", {
+        name: `${name}`,
+        contact: `${contact}`,
+        email: `${email}`,
+        profession: `${profession}`,
+        address: `${address}`,
+        cus_req: `2022-02-08 10:20`,
+        make: `${make}`,
+        brand: `${brand}`,
+        model: `${model}`,
+        payment: `${payment}`,
+        insurance: `${insurance}`,
+        remarks: `${remarks}`,
+      })
+      .then(alert("Inquiry added"))
+      .catch((e) => {
+        alert(e.response.data.message);
+      })
+      .then(alert("Inquiry added"))
+      .catch((e) => {
+        alert(e.response.data.message);
+      });
+  };
+
+  // setName("");
+  // setContact("");
+  // setEmail("");
+  // setProfession("");
+  // setAddress("");
+  // setCusRequestDate("");
+  // setMake("");
+  // setBrand("");
+  // setModel("");
+  // setPayment("");
+  // setInsurance("");
+  // setRemarks("");
 
   return (
     <div>
@@ -289,4 +329,5 @@ export const Inquiry = (props) => {
     </div>
   );
 };
+
 export default Inquiry;
