@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+// import form "dateTimePicker1";
 
 const TestRun = () => {
   const [name, setName] = useState("");
@@ -11,10 +13,49 @@ const TestRun = () => {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [ownership, setOwnership] = useState("");
-  const [datetime, setDatetime] = useState("");
+  const [year_manufacture, setYear_manufacture] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // dateTimePicker1.Format = DateTimePickerFormat.cus_req;
+    // Display the date as "Mon 27 Feb 2012".
+    // dateTimePicker1.CustomFormat = "yyyy mm dd";
+    // console.log(datetime);
+
+    axios
+      .post("http://127.0.0.1:8000/api/testdrive", {
+        name: `${name}`,
+        contact: `${contact}`,
+        email: `${email}`,
+        profession: `${profession}`,
+        address: `${address}`,
+        cus_req: `2022-02-08 10:20`,
+        make: `${make}`,
+        brand: `${brand}`,
+        model: `${model}`,
+        year_manufacture: `${year_manufacture}`,
+        ownership: `${ownership}`,
+      })
+      .then(() => {
+        alert("add testrun");
+      })
+
+      .catch((e) => {
+        alert(e.response.data.message);
+      });
+
+    setName("");
+    setEmail("");
+    setContact("");
+    setProfession("");
+    setAddress("");
+    setCus_req("");
+    setMake("");
+    setBrand("");
+    setModel("");
+    // setDatetime(Date.now());
+    setOwnership("");
+    // setFile('');
   };
 
   return (
@@ -129,11 +170,11 @@ const TestRun = () => {
                     </div>
                   </div>
                 </div>
+                <div id="success"></div>
+                <button type="submit" className="btn btn-custom btn-lg">
+                  Submit
+                </button>
               </form>
-              <div id="success"></div>
-              <button type="submit" className="btn btn-custom btn-lg">
-                Submit
-              </button>
             </div>
           </div>
           <form>
@@ -148,13 +189,11 @@ const TestRun = () => {
                       <div className="col-md-12">
                         <div className="form-group">
                           <input
-                            type="text"
-                            id="cus_req"
+                            type="datetime-local"
+                            id="datepicker"
                             name="cus_req"
-                            className="form-control"
-                            placeholder="Cus-Req"
-                            required
                             value={cus_req}
+                            className="form-control"
                             onChange={(e) => setCus_req(e.target.value)}
                           />
                           <p className="help-block text-danger"></p>
@@ -193,14 +232,32 @@ const TestRun = () => {
                       <div className="col-md-12">
                         <div className="form-group">
                           <input
-                            type="datetime-local"
-                            id="datetime"
-                            name="datetime"
+                            type="text"
+                            id="model"
+                            name="model"
                             className="form-control"
-                            placeholder=""
+                            placeholder="Model"
                             required
-                            value={datetime}
-                            onChange={(e) => setDatetime(e.target.value)}
+                            value={model}
+                            onChange={(e) => setModel(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <input
+                            type="text"
+                            id="year_manufacture"
+                            name="yaer_manufacture"
+                            className="form-control"
+                            placeholder="Year"
+                            maxlength="4"
+                            required
+                            value={year_manufacture}
+                            onChange={(e) =>
+                              setYear_manufacture(e.target.value)
+                            }
                           />
                           <p className="help-block text-danger"></p>
                         </div>
@@ -216,21 +273,6 @@ const TestRun = () => {
                             required
                             value={ownership}
                             onChange={(e) => setOwnership(e.target.value)}
-                          />
-                          <p className="help-block text-danger"></p>
-                        </div>
-                      </div>
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <input
-                            type="text"
-                            id="cus_req"
-                            name="cus_req"
-                            className="form-control"
-                            placeholder="Cus-Req"
-                            required
-                            value={cus_req}
-                            onChange={(e) => setName(e.target.value)}
                           />
                           <p className="help-block text-danger"></p>
                         </div>
