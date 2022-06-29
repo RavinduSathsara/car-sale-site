@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-// import form "dateTimePicker1";
+import moment from "moment";
 
 const TestRun = () => {
   const [name, setName] = useState("");
@@ -17,10 +17,6 @@ const TestRun = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dateTimePicker1.Format = DateTimePickerFormat.cus_req;
-    // Display the date as "Mon 27 Feb 2012".
-    // dateTimePicker1.CustomFormat = "yyyy mm dd";
-    // console.log(datetime);
 
     axios
       .post("http://127.0.0.1:8000/api/testdrive", {
@@ -29,7 +25,7 @@ const TestRun = () => {
         email: `${email}`,
         profession: `${profession}`,
         address: `${address}`,
-        cus_req: `2022-02-08 10:20`,
+        cus_req: moment(cus_req).format("YYYY-MM-DD HH:mm"),
         make: `${make}`,
         brand: `${brand}`,
         model: `${model}`,
@@ -53,11 +49,9 @@ const TestRun = () => {
     setMake("");
     setBrand("");
     setModel("");
-    // setDatetime(Date.now());
+    setYear_manufacture("");
     setOwnership("");
-    // setFile('');
   };
-
   return (
     <div>
       <div id="contact">
