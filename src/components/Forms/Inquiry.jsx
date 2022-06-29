@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import axios from "axios";
+import moment from "moment";
 
 const initialState = {
   name: "",
@@ -22,7 +23,7 @@ export const Inquiry = (props) => {
   const [email, setEmail] = useState("");
   const [profession, setProfession] = useState("");
   const [address, setAddress] = useState("");
-  const [cusRequestDate, setCusRequestDate] = useState("");
+  const [cus_req, setCusRequestDate] = useState("");
   const [make, setMake] = useState("");
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
@@ -54,7 +55,7 @@ export const Inquiry = (props) => {
         email: `${email}`,
         profession: `${profession}`,
         address: `${address}`,
-        cus_req: `2022-02-08 10:20`,
+        cus_req: moment(cus_req).format("YYYY-MM-DD HH:MM"),
         make: `${make}`,
         brand: `${brand}`,
         model: `${model}`,
