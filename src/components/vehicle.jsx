@@ -49,7 +49,7 @@ export const Vehicles = (props) => {
     return third.ownership === "Third Owner";
   });
   return (
-    <div id="vehicles" className="text-center">
+    <div id="vehicles" className="text-center text-block">
       <div className="container">
         <div className="section-title">
           <h2>Vehicles</h2>

@@ -89,49 +89,44 @@ export const Inquiry = (props) => {
   return (
     <div>
       <div id="contact">
+        <div className="section-title">
+          <p
+            style={{
+              fontWeight: "bold",
+              fontSize: "4rem",
+              marginTop: "5px",
+              textAlign: "center",
+            }}
+          >
+            INQUIRY
+          </p>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col-xs-12 col-md-6">
               {" "}
-              <img src="img/a.jpg" className="img-responsive" alt="" />{" "}
+              <img
+                src="img/inquiry.jpg"
+                className="img-responsive"
+                style={{ borderRadius: "30px" }}
+                alt=""
+              />{" "}
             </div>
             <div className="col-xs-12 col-md-6">
-              <div className="section-title">
+              <div className="section-title" style={{ marginLeft: "50px" }}>
                 <h2>Description</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  You can get the details of our vehicles from our car sale
+                  through this service. For more details and access the service
+                  please fill our vehicle inquiry form.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="container-fluid">
-            <div className="section-title">
-              <h2>Inquiry</h2>
-              <p>
-                Please fill out the form below to send us an email and we will
-                get back to you as soon as possible.
-              </p>
-            </div>
-
             <form
+              style={{ marginTop: "20px" }}
               name="inquiry"
               validate
               onSubmit={handleSubmit}

@@ -56,23 +56,29 @@ const TestRun = () => {
     <div>
       <div id="contact">
         <div className="section-tittle" style={{ textAlign: "center" }}>
-          <p style={{ fontweight: "bold", fontSize: "4rem", marginTop: "1px" }}>
-            Test Run
+          <p style={{ fontWeight: "bold", fontSize: "4rem", marginTop: "1px" }}>
+            TEST RUN
           </p>
         </div>
         <div className="container">
           <div className="row" style={{ marginTop: "30px" }}>
             <div className="col-xs-12 col-md-6">
-              <img src="img/a.jpg" className="img-responsive" alt="" />
+              <img
+                src="img/testdrive.jpg"
+                className="img-responsive"
+                alt=""
+                style={{ borderRadius: "30px" }}
+              />
             </div>
             <div className="col-xs-12 col-md-6">
               <div style={{ marginLeft: "50px" }}>
                 <h2>Description</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae possimus laborum voluptas in vitae voluptatum
-                  similique porro earum? Labore corrupti voluptatibus beatae
-                  tenetur porro aliquid in nihil quibusdam doloribus ut?
+                  Your test drive is about much more than clambering behind the
+                  wheel and making sure you can comfortably reach the controls.
+                  If you're shopping for a used car, it's your chance to check
+                  that the car is in good working order, and has been well
+                  looked-after by the current owner.
                 </p>
               </div>
             </div>
@@ -80,9 +86,15 @@ const TestRun = () => {
         </div>
 
         <div className="container">
-          <div className="col-md-4">
+          <div className="col-md-6">
             <div className="row">
-              <h3 style={{ textAlign: "center", marginTop: "98px" }}>
+              <h3
+                style={{
+                  textAlign: "center",
+                  marginTop: "98px",
+                  fontSize: "35px",
+                }}
+              >
                 Personal
               </h3>
               <form name="sent message " validate onSubmit={handleSubmit}>
@@ -172,9 +184,17 @@ const TestRun = () => {
             </div>
           </div>
           <form>
-            <div className="col-md-4 col-md-offset-1 contact-info">
+            <div className="col-md-6">
               <div className="contact-item">
-                <h3 style={{ textAlign: "center" }}>Vehicle</h3>
+                <h3
+                  style={{
+                    textAlign: "center",
+                    marginTop: "82px",
+                    fontSize: "35px",
+                  }}
+                >
+                  Vehicle
+                </h3>
               </div>
               <div className="contact-item" style={{ marginTop: "40px" }}>
                 <div className="row">

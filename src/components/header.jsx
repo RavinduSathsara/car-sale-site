@@ -9,9 +9,13 @@ export const Header = (props) => {
                 <h1>
                   {/* {props.data ? props.data.title : 'Loading'}
                   <span></span> */}
-                  WE ARE A LANDING PAGE
+                  GET YOUR DREAM VEHICLE
                 </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
+                {/* <p>{props.data ? props.data.paragraph : "Loading"}</p> */}
+                <p>
+                  Choose your dream vehicle according to your own requirements
+                  from us.
+                </p>
                 <a
                   href="#features"
                   className="btn btn-custom btn-lg page-scroll"

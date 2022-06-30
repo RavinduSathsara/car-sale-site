@@ -91,17 +91,23 @@ const SwapDeal = () => {
             <p
               style={{
                 fontWeight: "bold",
+                marginBottom: "20px",
                 fontSize: "4rem",
               }}
             >
-              Swap Deal
+              SWAP DEAL
             </p>
           </div>
 
           <div className="container">
             <div className="row" style={{ marginTop: "30px" }}>
               <div className="col-xs-12 col-md-6">
-                <img src="img/a.jpg" className="img-responsive" alt="" />
+                <img
+                  src="img/swapdeal.jpg"
+                  className="img-responsive"
+                  alt=""
+                  style={{ borderRadius: "30px" }}
+                />
               </div>
               <div className="col-xs-12 col-md-6">
                 <div style={{ marginLeft: "50px" }}>
@@ -119,7 +125,13 @@ const SwapDeal = () => {
           <div className="container" style={{ marginTop: "15px" }}>
             <div className="col-md-7">
               <div className="row">
-                <h3 style={{ textAlign: "center", marginTop: "98px" }}>
+                <h3
+                  style={{
+                    textAlign: "center",
+                    marginTop: "98px",
+                    fontSize: "35px",
+                  }}
+                >
                   Personal
                 </h3>
                 <form onSubmit={handleSubmit} onReset={handleReset}>
@@ -357,8 +369,16 @@ const SwapDeal = () => {
             </div>
             <form onSubmit={handleSubmit} onReset={handleReset}>
               <div className="col-md-4 col-md-offset-1 contact-info">
-                <div className="contact-item" style={{ textAlign: "center" }}>
-                  <h3>Expecting</h3>
+                <div className="contact-item">
+                  <h3
+                    style={{
+                      textAlign: "center",
+                      marginTop: "80px",
+                      fontSize: "35px",
+                    }}
+                  >
+                    Expecting
+                  </h3>
                 </div>
                 <div className="contact-item" style={{ marginTop: "43px" }}>
                   <div className="row">
