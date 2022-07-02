@@ -59,10 +59,12 @@ ol {
 ul,
 ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
+  -webkit-padding: 0;
+  -moz-padding: 0;
 }
-
+.btn-group {
+  padding: 8px;
+}
 /* Navigation */
 #menu {
   padding: 15px;
@@ -426,6 +428,7 @@ header .intro-text {
 #testimonials {
   padding: 100px 0;
   background: #f6f6f6;
+  margin-top: 50px;
 }
 #testimonials i {
   color: #e6e6e6;

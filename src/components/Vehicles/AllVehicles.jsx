@@ -1,9 +1,8 @@
-import { Image } from "./image";
-import VehicleCard from "./VehicleCard";
-import useFetch from "../hooks/useFetch";
+import VehicleCard from "../VehicleCard/index";
+import useFetch from "../../hooks/useFetch";
 import { useState } from "react";
 
-export const Vehicles = (props) => {
+const AllVehicles = (props) => {
   const { data, isLoading } = useFetch("http://127.0.0.1:8000/api/vehicles");
   const [makeFilter, setMakeFilter] = useState("");
 
@@ -52,16 +51,16 @@ export const Vehicles = (props) => {
     <div id="vehicles" className="text-center text-block">
       <div className="container">
         <div className="section-title" style={{ marginBottom: "20px" }}>
-          <h2>Vehicles</h2>
-          <div class="btn-group">
+          <h2 style={{ marginBottom: "20px" }}>Vehicles</h2>
+          <div className="btn-group">
             <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               data-toggle="dropdown"
             >
-              Make <span class="caret"></span>
+              Make <span className="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu">
+            <ul className="dropdown-menu" role="menu">
               <li>
                 <a
                   onClick={() => {
@@ -100,15 +99,15 @@ export const Vehicles = (props) => {
               </li>
             </ul>
           </div>
-          <div class="btn-group " style={{ margin: "3px" }}>
+          <div className="btn-group " style={{ margin: "3px" }}>
             <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               data-toggle="dropdown"
             >
-              Fuel Type <span class="caret"></span>
+              Fuel Type <span className="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu">
+            <ul className="dropdown-menu" role="menu">
               <li>
                 <a
                   onClick={() => {
@@ -138,15 +137,15 @@ export const Vehicles = (props) => {
               </li>
             </ul>
           </div>
-          <div class="btn-group " style={{ margin: "3px" }}>
+          <div className="btn-group " style={{ margin: "3px" }}>
             <button
               type="button"
-              class="btn btn-primary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               data-toggle="dropdown"
             >
-              OwnerShip <span class="caret"></span>
+              OwnerShip <span className="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu">
+            <ul className="dropdown-menu" role="menu">
               <li>
                 <a
                   onClick={() => {
@@ -189,7 +188,7 @@ export const Vehicles = (props) => {
 
         <div className="container">
           {makeFilter === ""
-            ? data?.Vehicle.slice(0, 6).map((item) => (
+            ? data?.Vehicle.map((item) => (
                 <VehicleCard
                   brand={item.brand}
                   image={item.v_image}
@@ -363,10 +362,8 @@ export const Vehicles = (props) => {
               ))
             : ""} */}
         </div>
-        <a target="_blank" href="/all-vehicles">
-          <button className="btn-custom">Show More...</button>
-        </a>
       </div>
     </div>
   );
 };
+export default AllVehicles;
