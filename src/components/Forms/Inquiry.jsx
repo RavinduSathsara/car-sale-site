@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import axios from "axios";
 import moment from "moment";
-
+import Swal from "sweetalert2";
 const initialState = {
   name: "",
   contact: "",
@@ -63,28 +63,33 @@ export const Inquiry = (props) => {
         insurance: `${insurance}`,
         remarks: `${remarks}`,
       })
-      .then(alert("Inquiry added"))
-      .catch((e) => {
-        alert(e.response.data.message);
+      .then(() => {
+        Swal.fire(`Inquiry Added !  `, "Successfuly!", "success");
       })
-      .then(alert("Inquiry added"))
-      .catch((e) => {
-        alert(e.response.data.message);
-      });
-  };
 
-  // setName("");
-  // setContact("");
-  // setEmail("");
-  // setProfession("");
-  // setAddress("");
-  // setCusRequestDate("");
-  // setMake("");
-  // setBrand("");
-  // setModel("");
-  // setPayment("");
-  // setInsurance("");
-  // setRemarks("");
+      .catch((e) => {
+        Swal.fire({
+          text: e.response.data.message,
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, Decline",
+        });
+      });
+    setName("");
+    setContact("");
+    setEmail("");
+    setProfession("");
+    setAddress("");
+    setCusRequestDate("");
+    setMake("");
+    setBrand("");
+    setModel("");
+    setPayment("");
+    setInsurance("");
+    setRemarks("");
+  };
 
   return (
     <div>
@@ -215,6 +220,7 @@ export const Inquiry = (props) => {
                       type="datetime-local"
                       id="cusRequestDate"
                       name="cusRequestDate"
+                      value={cus_req}
                       //value="2018-06-12T19:30"
                       className="form-control"
                       placeholder="Select Date"

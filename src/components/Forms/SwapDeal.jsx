@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 const SwapDeal = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -51,11 +52,18 @@ const SwapDeal = () => {
         decision: 0,
       })
       .then(() => {
-        alert("add Swap");
+        Swal.fire(`Swap deal Added !  `, "Successfuly!", "success");
       })
 
       .catch((e) => {
-        alert(e.response.data.message);
+        Swal.fire({
+          text: e.response.data.message,
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, Decline",
+        });
       });
   };
   const handleReset = (event) => {
@@ -316,6 +324,7 @@ const SwapDeal = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
+                          required
                           type="text"
                           id="cusYearManufacture"
                           name="cusYearManufacture"
@@ -333,6 +342,7 @@ const SwapDeal = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
+                          required
                           type="text"
                           id="yearRegistration"
                           name="YearRegistration"
@@ -350,6 +360,7 @@ const SwapDeal = () => {
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
+                          required
                           type="text"
                           id="mileage"
                           name="mileage"
@@ -464,6 +475,7 @@ const SwapDeal = () => {
                     <div className="col-md-12">
                       <div className="form-group">
                         <input
+                          required
                           type="text"
                           id="yearManufacture"
                           name="yearManufacture"
