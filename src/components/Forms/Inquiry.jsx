@@ -140,6 +140,8 @@ export const Inquiry = (props) => {
               <div className="row" align="center">
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="name">Full Name: </label>
                     <input
                       id="name"
                       type="text"
@@ -154,6 +156,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="contact"> Contact: </label>
                     <input
                       type="number"
                       id="contact"
@@ -170,6 +174,8 @@ export const Inquiry = (props) => {
 
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="email"> Email: </label>
                     <input
                       type="email"
                       id="email"
@@ -185,6 +191,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="profession"> Profession: </label>
                     <input
                       margin-top="25px"
                       type="text"
@@ -192,7 +200,7 @@ export const Inquiry = (props) => {
                       value={profession}
                       name="profession"
                       className="form-control"
-                      placeholder="Profession"
+                      placeholder="eg: Seller"
                       required
                       onChange={(e) => setProfession(e.target.value)}
                     />
@@ -201,6 +209,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="address">Address: </label>
                     <input
                       type="text"
                       id="address"
@@ -216,6 +226,11 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="cusRequestDate">
+                      {" "}
+                      Customer Request Date and Time:{" "}
+                    </label>
                     <input
                       type="datetime-local"
                       id="cusRequestDate"
@@ -232,13 +247,14 @@ export const Inquiry = (props) => {
 
                 <div className="col-md-6">
                   <div className="form-group">
+                    <label htmlFor="make">Make:</label>
                     <input
                       type="text"
                       id="make"
                       value={make}
                       name="make"
                       className="form-control"
-                      placeholder="Make"
+                      placeholder="eg: Car"
                       required
                       onChange={(e) => setMake(e.target.value)}
                     />
@@ -247,6 +263,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="brand">Brand</label>
                     <input
                       type="text"
                       id="brand"
@@ -262,6 +280,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="model">Model</label>
                     <input
                       type="text"
                       id="model"
@@ -277,6 +297,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-6">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="payment">Payment</label>
                     <input
                       type="text"
                       id="payment"
@@ -292,6 +314,8 @@ export const Inquiry = (props) => {
                 </div>
                 <div className="col-md-12">
                   <div className="form-group">
+                    {" "}
+                    <label htmlFor="insurance">Insurance</label>
                     <input
                       type="text"
                       id="insurance"
@@ -308,6 +332,8 @@ export const Inquiry = (props) => {
               </div>
 
               <div className="form-group">
+                {" "}
+                <label htmlFor="remark">Remark</label>
                 <textarea
                   name="remarks"
                   id="remarks"

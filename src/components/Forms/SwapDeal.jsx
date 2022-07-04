@@ -142,10 +142,16 @@ const SwapDeal = () => {
                 >
                   Personal
                 </h3>
-                <form onSubmit={handleSubmit} onReset={handleReset}>
+                <form
+                  onSubmit={handleSubmit}
+                  onReset={handleReset}
+                  style={{ marginLeft: "12px" }}
+                >
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        {" "}
+                        <label htmlFor="name">Full Name:</label>
                         <input
                           type="text"
                           id="name"
@@ -161,6 +167,8 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        {" "}
+                        <label htmlFor="email">Email:</label>
                         <input
                           type="email"
                           id="email"
@@ -178,6 +186,7 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="contact">Contact</label>
                         <input
                           type="text"
                           id="contact"
@@ -193,12 +202,14 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        {" "}
+                        <label htmlFor="profession">Profession</label>
                         <input
                           type="text"
                           id="profession"
                           name="profession"
                           className="form-control"
-                          placeholder="Profession"
+                          placeholder="eg: Seller"
                           required
                           value={profession}
                           onChange={(e) => setProfession(e.target.value)}
@@ -210,6 +221,8 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
+                        {" "}
+                        <label htmlFor="address">Address</label>
                         <input
                           type="text"
                           id="address"
@@ -227,12 +240,14 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        {" "}
+                        <label htmlFor="cusMake">Customer Make</label>
                         <input
                           type="text"
                           id="cusMake"
                           name="cusMake"
                           className="form-control"
-                          placeholder="Customer Make"
+                          placeholder="eg: Car"
                           required
                           value={cusMake}
                           onChange={(e) => setCusMake(e.target.value)}
@@ -242,6 +257,7 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="cusBrand">Customer Brand</label>
                         <input
                           type="text"
                           id="cusBrand"
@@ -259,6 +275,7 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="cusModek">Customer Model</label>
                         <input
                           type="text"
                           id="cusModel"
@@ -274,12 +291,13 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="cusOwnership">Customer Ownership</label>
                         <input
                           type="text"
                           id="cusOwnership"
                           name="cusOwnership"
                           className="form-control"
-                          placeholder="Customer Ownership"
+                          placeholder="First Owner"
                           required
                           value={cusOwnership}
                           onChange={(e) => setCusOwnership(e.target.value)}
@@ -291,6 +309,7 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="chassisNo">Chassis No</label>
                         <input
                           type="text"
                           id="chassisNo"
@@ -306,12 +325,13 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="cusFuelType">Customer Fuel Type</label>
                         <input
                           type="text"
                           id="cusFuelType"
                           name="cusFuelType"
                           className="form-control"
-                          placeholder="Customer Fuel Type"
+                          placeholder="eg: Petrol"
                           required
                           value={cusFuelType}
                           onChange={(e) => setCusFuelType(e.target.value)}
@@ -323,6 +343,9 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="cusYearManufacture">
+                          Customer Year Manufacture
+                        </label>
                         <input
                           required
                           type="text"
@@ -341,6 +364,9 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="yearRegistration">
+                          Year Registration
+                        </label>
                         <input
                           required
                           type="text"
@@ -359,6 +385,7 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
+                        <label htmlFor="mileage">Mileage</label>
                         <input
                           required
                           type="text"
@@ -395,6 +422,7 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="brand">Brand</label>
                         <input
                           type="text"
                           id="brand"
@@ -410,6 +438,7 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="model">Model</label>
                         <input
                           type="text"
                           id="model"
@@ -427,12 +456,13 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="make">Make</label>
                         <input
                           type="text"
                           id="make"
                           name="make"
                           className="form-control"
-                          placeholder="Make"
+                          placeholder="eg: Car"
                           required
                           value={make}
                           onChange={(e) => setMake(e.target.value)}
@@ -442,12 +472,13 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="ownership">Ownership</label>
                         <input
                           type="text"
                           id="ownership"
                           name="ownership"
                           className="form-control"
-                          placeholder="Ownership"
+                          placeholder="eg: First Owner"
                           required
                           value={ownership}
                           onChange={(e) => setOwnership(e.target.value)}
@@ -459,12 +490,13 @@ const SwapDeal = () => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="fuelType">Fuel Type</label>
                         <input
                           type="text"
                           id="fuelType"
                           name="fuelType"
                           className="form-control"
-                          placeholder="Fueltype"
+                          placeholder="eg: Petrol"
                           required
                           value={fuelType}
                           onChange={(e) => setFuelType(e.target.value)}
@@ -474,6 +506,9 @@ const SwapDeal = () => {
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
+                        <label htmlFor="yearManufacture">
+                          Year Manufacture
+                        </label>
                         <input
                           required
                           type="text"
@@ -491,35 +526,38 @@ const SwapDeal = () => {
                 </div>
               </div>
             </form>
-            <form onSubmit={handleSubmit} onReset={handleReset}>
-              {" "}
-              <div className="form-group">
-                <textarea
-                  style={{ height: "80px" }}
-                  name="remark"
-                  id="remark"
-                  className="form-control"
-                  rows="4"
-                  placeholder="Remark"
-                  required
-                  value={remark}
-                  onChange={(e) => setRemark(e.target.value)}
-                ></textarea>
-                <div>
-                  {" "}
-                  <button type="submit" className="btn btn-custom btn-lg">
-                    Submit
-                  </button>
-                  <button
-                    type="reset"
-                    className="btn btn-custom btn-lg"
-                    style={{ marginLeft: "5px" }}
-                  >
-                    Reset
-                  </button>
+            <div className="col-md-12">
+              <form onSubmit={handleSubmit} onReset={handleReset}>
+                <label htmlFor="remark">Remark</label>
+                <div className="form-group">
+                  <textarea
+                    style={{ height: "80px" }}
+                    name="remark"
+                    id="remark"
+                    className="form-control"
+                    rows="4"
+                    placeholder="Remark"
+                    required
+                    value={remark}
+                    onChange={(e) => setRemark(e.target.value)}
+                  ></textarea>
+
+                  <div style={{ textAlign: "center" }}>
+                    {" "}
+                    <button type="submit" className="btn btn-custom btn-lg">
+                      Submit
+                    </button>
+                    <button
+                      type="reset"
+                      className="btn btn-custom btn-lg"
+                      style={{ marginLeft: "10px" }}
+                    >
+                      Reset
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

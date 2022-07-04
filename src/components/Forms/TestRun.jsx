@@ -108,12 +108,13 @@ const TestRun = () => {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="form-group">
+                      <label htmlFor="name"> Full Name: </label>
                       <input
                         type="text"
                         id="name"
                         name="name"
                         className="form-control"
-                        placeholder="Name"
+                        placeholder="eg. Kamal Nishantha"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -123,6 +124,7 @@ const TestRun = () => {
                   </div>
                   <div className="col-md-12">
                     <div className="form-group">
+                      <label htmlFor="contact">Contact: </label>
                       <input
                         type="text"
                         id="contact"
@@ -138,6 +140,8 @@ const TestRun = () => {
                   </div>
                   <div className="col-md-12">
                     <div className="form-group">
+                      {" "}
+                      <label htmlFor="email"> Email: </label>
                       <input
                         type="email"
                         id="email"
@@ -153,12 +157,14 @@ const TestRun = () => {
                   </div>
                   <div className="col-md-12">
                     <div className="form-group">
+                      {" "}
+                      <label htmlFor="profession"> Profession: </label>
                       <input
                         type="text"
                         id="Profession"
                         name="profession"
                         className="form-control"
-                        placeholder="Profession"
+                        placeholder="eg: Seller"
                         required
                         value={profession}
                         onChange={(e) => setProfession(e.target.value)}
@@ -169,6 +175,8 @@ const TestRun = () => {
 
                   <div className="col-md-12">
                     <div className="form-group">
+                      {" "}
+                      <label htmlFor="address"> Address: </label>
                       <input
                         type="text"
                         id="address"
@@ -209,6 +217,11 @@ const TestRun = () => {
                     <div className="form-group">
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="cus_req">
+                            {" "}
+                            Customer Request Date and Time:{" "}
+                          </label>
                           <input
                             type="datetime-local"
                             id="datepicker"
@@ -222,12 +235,14 @@ const TestRun = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="nake"> Make: </label>
                           <input
                             type="text"
                             id="make"
                             name="make"
                             className="form-control"
-                            placeholder="Make"
+                            placeholder="eg: Car"
                             required
                             value={make}
                             onChange={(e) => setMake(e.target.value)}
@@ -237,6 +252,8 @@ const TestRun = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="brand"> Brand: </label>
                           <input
                             type="text"
                             id="brand"
@@ -252,6 +269,8 @@ const TestRun = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="model"> Model: </label>
                           <input
                             type="text"
                             id="model"
@@ -267,6 +286,11 @@ const TestRun = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="year_manufacture">
+                            {" "}
+                            Year Manufacture:{" "}
+                          </label>
                           <input
                             type="text"
                             id="year_manufacture"
@@ -285,12 +309,14 @@ const TestRun = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group">
+                          {" "}
+                          <label htmlFor="ownership"> Ownership: </label>
                           <input
                             type="text"
                             id="ownership"
                             name="ownership"
                             className="form-control"
-                            placeholder="Ownership"
+                            placeholder="eg: First Owner"
                             required
                             value={ownership}
                             onChange={(e) => setOwnership(e.target.value)}
