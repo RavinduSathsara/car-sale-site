@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import moment from "moment";
-
+import Swal from "sweetalert2";
 const TestRun = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,11 +33,18 @@ const TestRun = () => {
         ownership: `${ownership}`,
       })
       .then(() => {
-        alert("add testrun");
+        Swal.fire(`Test Run Added !  `, "Successfuly!", "success");
       })
 
       .catch((e) => {
-        alert(e.response.data.message);
+        Swal.fire({
+          text: e.response.data.message,
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, Decline",
+        });
       });
 
     setName("");
@@ -263,7 +270,7 @@ const TestRun = () => {
                           <input
                             type="text"
                             id="year_manufacture"
-                            name="yaer_manufacture"
+                            name="year_manufacture"
                             className="form-control"
                             placeholder="Year"
                             maxlength="4"
