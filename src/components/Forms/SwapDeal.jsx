@@ -157,7 +157,7 @@ const SwapDeal = () => {
                           id="name"
                           name="name"
                           className="form-control"
-                          placeholder="Name"
+                          placeholder="eg: Amaljith"
                           required
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -174,7 +174,7 @@ const SwapDeal = () => {
                           id="email"
                           name="email"
                           className="form-control"
-                          placeholder="Email"
+                          placeholder="eg: vehiclesolution@gmail.com"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
@@ -192,7 +192,7 @@ const SwapDeal = () => {
                           id="contact"
                           name="contact"
                           className="form-control"
-                          placeholder="Contact"
+                          placeholder="eg: 1234567890"
                           required
                           value={contact}
                           onChange={(e) => setContact(e.target.value)}
@@ -228,7 +228,7 @@ const SwapDeal = () => {
                           id="address"
                           name="address"
                           className="form-control"
-                          placeholder="Address"
+                          placeholder="eg: 173 Kirulapana"
                           required
                           value={address}
                           onChange={(e) => setAddress(e.target.value)}
@@ -263,7 +263,7 @@ const SwapDeal = () => {
                           id="cusBrand"
                           name="cusBrand"
                           className="form-control"
-                          placeholder="Customer Brand"
+                          placeholder="eg: Toyota"
                           required
                           value={cusBrand}
                           onChange={(e) => setCusBrand(e.target.value)}
@@ -281,7 +281,7 @@ const SwapDeal = () => {
                           id="cusModel"
                           name="cusModel"
                           className="form-control"
-                          placeholder="Customer Model"
+                          placeholder="eg: Prius"
                           required
                           value={cusModel}
                           onChange={(e) => setCusModel(e.target.value)}
@@ -297,7 +297,7 @@ const SwapDeal = () => {
                           id="cusOwnership"
                           name="cusOwnership"
                           className="form-control"
-                          placeholder="First Owner"
+                          placeholder="eg: First Owner"
                           required
                           value={cusOwnership}
                           onChange={(e) => setCusOwnership(e.target.value)}
@@ -315,7 +315,7 @@ const SwapDeal = () => {
                           id="chassisNo"
                           name="chassisNo"
                           className="form-control"
-                          placeholder="Chassis No"
+                          placeholder="eg: 123456"
                           required
                           value={chassisNo}
                           onChange={(e) => setChassisNo(e.target.value)}
@@ -352,7 +352,7 @@ const SwapDeal = () => {
                           id="cusYearManufacture"
                           name="cusYearManufacture"
                           className="form-control"
-                          placeholder="Customer Year Manufacture"
+                          placeholder="eg: 2000"
                           value={cusYearManufacture}
                           onChange={(e) =>
                             setCusYearManufacture(e.target.value)
@@ -373,7 +373,7 @@ const SwapDeal = () => {
                           id="yearRegistration"
                           name="YearRegistration"
                           className="form-control"
-                          placeholder="Year Registration"
+                          placeholder="eg: 2000"
                           value={yearRegistration}
                           onChange={(e) => setYearRegistration(e.target.value)}
                         />
@@ -392,7 +392,7 @@ const SwapDeal = () => {
                           id="mileage"
                           name="mileage"
                           className="form-control"
-                          placeholder="Mileage"
+                          placeholder="eg: 10000"
                           value={mileage}
                           onChange={(e) => setMileage(e.target.value)}
                         />
@@ -428,7 +428,7 @@ const SwapDeal = () => {
                           id="brand"
                           name="brand"
                           className="form-control"
-                          placeholder="Brand"
+                          placeholder="eg: Toyota"
                           required
                           value={brand}
                           onChange={(e) => setBrand(e.target.value)}
@@ -444,7 +444,7 @@ const SwapDeal = () => {
                           id="model"
                           name="model"
                           className="form-control"
-                          placeholder="Model"
+                          placeholder="eg: Prius"
                           required
                           value={model}
                           onChange={(e) => setModel(e.target.value)}
@@ -515,7 +515,7 @@ const SwapDeal = () => {
                           id="yearManufacture"
                           name="yearManufacture"
                           className="form-control"
-                          placeholder="Year Manufacture"
+                          placeholder="eg: 2000"
                           value={yearManufacture}
                           onChange={(e) => setYearManufacture(e.target.value)}
                         />
@@ -536,7 +536,7 @@ const SwapDeal = () => {
                     id="remark"
                     className="form-control"
                     rows="4"
-                    placeholder="Remark"
+                    placeholder="Type your message "
                     required
                     value={remark}
                     onChange={(e) => setRemark(e.target.value)}

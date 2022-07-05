@@ -114,7 +114,7 @@ const TestRun = () => {
                         id="name"
                         name="name"
                         className="form-control"
-                        placeholder="eg. Kamal Nishantha"
+                        placeholder="eg. Amaljith"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -130,7 +130,7 @@ const TestRun = () => {
                         id="contact"
                         name="contact"
                         className="form-control"
-                        placeholder="Contact"
+                        placeholder="eg: 1234567890"
                         required
                         value={contact}
                         onChange={(e) => setContact(e.target.value)}
@@ -147,7 +147,7 @@ const TestRun = () => {
                         id="email"
                         name="email"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder="eg: vehiclesolution@gmail.com"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -182,7 +182,7 @@ const TestRun = () => {
                         id="address"
                         name="address"
                         className="form-control"
-                        placeholder="Address"
+                        placeholder="eg: 173 Kirulapana"
                         required
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
@@ -259,7 +259,7 @@ const TestRun = () => {
                             id="brand"
                             name="brand"
                             className="form-control"
-                            placeholder="Brand"
+                            placeholder="eg: Toyota"
                             required
                             value={brand}
                             onChange={(e) => setBrand(e.target.value)}
@@ -276,7 +276,7 @@ const TestRun = () => {
                             id="model"
                             name="model"
                             className="form-control"
-                            placeholder="Model"
+                            placeholder="eg: Prius"
                             required
                             value={model}
                             onChange={(e) => setModel(e.target.value)}
@@ -296,7 +296,7 @@ const TestRun = () => {
                             id="year_manufacture"
                             name="year_manufacture"
                             className="form-control"
-                            placeholder="Year"
+                            placeholder="eg: 2000"
                             maxlength="4"
                             required
                             value={year_manufacture}
