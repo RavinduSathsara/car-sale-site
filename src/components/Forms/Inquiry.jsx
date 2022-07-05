@@ -148,7 +148,7 @@ export const Inquiry = (props) => {
                       value={name}
                       name="name"
                       className="form-control"
-                      placeholder="Name"
+                      placeholder="eg: Amaljith"
                       required
                       onChange={(e) => setName(e.target.value)}
                     />
@@ -164,7 +164,7 @@ export const Inquiry = (props) => {
                       value={contact}
                       name="contact"
                       className="form-control"
-                      placeholder="Contact"
+                      placeholder="eg: 1234567890"
                       required
                       onChange={(e) => setContact(e.target.value)}
                     />
@@ -182,7 +182,7 @@ export const Inquiry = (props) => {
                       value={email}
                       name="email"
                       className="form-control"
-                      placeholder="Email"
+                      placeholder="eg: vehiclesolution@gmail.com"
                       required
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -217,7 +217,7 @@ export const Inquiry = (props) => {
                       value={address}
                       name="address"
                       className="form-control"
-                      placeholder="Address"
+                      placeholder="eg: 173 kirulapana"
                       required
                       onChange={(e) => setAddress(e.target.value)}
                     />
@@ -271,7 +271,7 @@ export const Inquiry = (props) => {
                       value={brand}
                       name="brand"
                       className="form-control"
-                      placeholder="Brand"
+                      placeholder="eg: Toyota"
                       required
                       onChange={(e) => setBrand(e.target.value)}
                     />
@@ -288,7 +288,7 @@ export const Inquiry = (props) => {
                       value={model}
                       name="model"
                       className="form-control"
-                      placeholder="Model"
+                      placeholder="eg: Prius"
                       required
                       onChange={(e) => setModel(e.target.value)}
                     />
@@ -305,7 +305,7 @@ export const Inquiry = (props) => {
                       value={payment}
                       name="payment"
                       className="form-control"
-                      placeholder="Payment"
+                      placeholder="eg: Full payment"
                       required
                       onChange={(e) => setPayment(e.target.value)}
                     />
@@ -340,7 +340,7 @@ export const Inquiry = (props) => {
                   value={remarks}
                   className="form-control"
                   rows="4"
-                  placeholder="Remarks"
+                  placeholder="Type your message"
                   required
                   onChange={(e) => setRemarks(e.target.value)}
                 ></textarea>
