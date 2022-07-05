@@ -133,6 +133,7 @@ const TestRun = () => {
                         placeholder="eg: 1234567890"
                         required
                         value={contact}
+                        maxLength={10}
                         onChange={(e) => setContact(e.target.value)}
                       />
                       <p className="help-block text-danger"></p>
@@ -297,7 +298,7 @@ const TestRun = () => {
                             name="year_manufacture"
                             className="form-control"
                             placeholder="eg: 2000"
-                            maxlength="4"
+                            maxlength={4}
                             required
                             value={year_manufacture}
                             onChange={(e) =>

@@ -194,6 +194,7 @@ const SwapDeal = () => {
                           className="form-control"
                           placeholder="eg: 1234567890"
                           required
+                          maxLength={10}
                           value={contact}
                           onChange={(e) => setContact(e.target.value)}
                         />
@@ -353,6 +354,7 @@ const SwapDeal = () => {
                           name="cusYearManufacture"
                           className="form-control"
                           placeholder="eg: 2000"
+                          maxLength={4}
                           value={cusYearManufacture}
                           onChange={(e) =>
                             setCusYearManufacture(e.target.value)
@@ -374,6 +376,7 @@ const SwapDeal = () => {
                           name="YearRegistration"
                           className="form-control"
                           placeholder="eg: 2000"
+                          maxLength={4}
                           value={yearRegistration}
                           onChange={(e) => setYearRegistration(e.target.value)}
                         />
@@ -516,6 +519,7 @@ const SwapDeal = () => {
                           name="yearManufacture"
                           className="form-control"
                           placeholder="eg: 2000"
+                          maxLength={4}
                           value={yearManufacture}
                           onChange={(e) => setYearManufacture(e.target.value)}
                         />
