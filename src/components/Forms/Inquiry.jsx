@@ -159,13 +159,14 @@ export const Inquiry = (props) => {
                     {" "}
                     <label htmlFor="contact"> Contact: </label>
                     <input
-                      type="number"
+                      type="text"
                       id="contact"
                       value={contact}
                       name="contact"
                       className="form-control"
                       placeholder="eg: 1234567890"
                       required
+                      maxLength={10}
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <p className="help-block text-danger"></p>
