@@ -262,10 +262,42 @@ header .intro-text {
   padding-bottom: 200px;
   text-align: center;
 }
-/* Features Section */
-#features {
+/*calculator */
+#calculator {
   background: #f6f6f6;
+  padding: 100px 0;
 }
+#calculator h2 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+#calculator form {
+  position: relative;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  margin-left: 100px;
+}
+#calculator label {
+  color: black;
+  font-weight: bold;
+}
+#calculator button {
+  color: white;
+  font-weight: bold;
+  background-color: #313137;
+
+  width: 140px;
+}
+#calculator button:hover {
+  color: rgb(244, 241, 241);
+  font-weight: bold;
+  background-color: #242441;
+
+  width: 140px;
+}
+/* Features Section */
+
 #features i.fa {
   font-size: 38px;
   margin-bottom: 20px;
@@ -633,6 +665,12 @@ label {
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
+  }
+  #calculator form {
+    margin-right: 250px;
+  }
+  #calculator button {
+    margin-top: 5px;
   }
 }
 
