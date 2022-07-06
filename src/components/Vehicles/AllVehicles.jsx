@@ -9,25 +9,10 @@ const AllVehicles = (props) => {
   const cars = data?.Vehicle.filter((car) => {
     return car.make === "Car";
   });
-  const petrolCars = cars?.filter((petrolCar) => {
-    return petrolCar.fuel_type === "Petrol";
-  });
-  const dieselCars = cars?.filter((dieselCar) => {
-    return dieselCar.fuel_type === "Diesel";
-  });
 
   const jeep = data?.Vehicle.filter((jeep) => {
     return jeep.make === "Jeep";
   });
-  const petrolJeeps = jeep?.filter((petrolJeep) => {
-    return petrolJeep.fuel_type === "Petrol";
-  });
-  const dieselJeeps = jeep?.filter((dieselJeep) => {
-    return dieselJeep.fuel_type === "Diesel";
-  });
-  console.log("dd", petrolJeeps);
-  console.log("pp", dieselJeeps);
-  console.log("ab", jeep);
 
   const vans = data?.Vehicle.filter((van) => {
     return van.make === "Van";
@@ -298,69 +283,6 @@ const AllVehicles = (props) => {
                 />
               ))
             : ""}
-          {/* {makeFilter === "petrol"
-            ? petrolCars.map((item) => (
-                <VehicleCard
-                  brand={item.brand}
-                  image={item.v_image}
-                  model={item.model}
-                  yom={item.year_manufacture}
-                  mileage={item.mileage}
-                  price={item.unit_price}
-                  availability={item.availability}
-                />
-              ))
-            : ""}{" "}
-          {makeFilter === "Petrol"
-            ? petrolCars.map((item) => (
-                <VehicleCard
-                  brand={item.brand}
-                  image={item.v_image}
-                  model={item.model}
-                  yom={item.year_manufacture}
-                  mileage={item.mileage}
-                  price={item.unit_price}
-                  availability={item.availability}
-                />
-              ))
-            : makeFilter === "Diesel"
-            ? dieselCars.map((item) => (
-                <VehicleCard
-                  brand={item.brand}
-                  image={item.v_image}
-                  model={item.model}
-                  yom={item.year_manufacture}
-                  mileage={item.mileage}
-                  price={item.unit_price}
-                  availability={item.availability}
-                />
-              ))
-            : ""}
-          {makeFilter === "Petrol"
-            ? petrolJeeps.map((item) => (
-                <VehicleCard
-                  brand={item.brand}
-                  image={item.v_image}
-                  model={item.model}
-                  yom={item.year_manufacture}
-                  mileage={item.mileage}
-                  price={item.unit_price}
-                  availability={item.availability}
-                />
-              ))
-            : makeFilter === "Diesel"
-            ? dieselJeeps.map((item) => (
-                <VehicleCard
-                  brand={item.brand}
-                  image={item.v_image}
-                  model={item.model}
-                  yom={item.year_manufacture}
-                  mileage={item.mileage}
-                  price={item.unit_price}
-                  availability={item.availability}
-                />
-              ))
-            : ""} */}
         </div>
       </div>
     </div>
