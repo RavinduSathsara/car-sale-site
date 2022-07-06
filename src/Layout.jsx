@@ -9,6 +9,7 @@ import { Vehicles } from "./components/vehicle";
 import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
+import FinanceCalculator from "./components/FinanceCalculator/FinanceCalculator";
 const Layout = () => {
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
@@ -22,6 +23,7 @@ const Layout = () => {
       {/* <About data={landingPageData.About} /> */}
       <Services data={landingPageData.Services} />
       <Vehicles data={landingPageData.Vehicles} />
+      <FinanceCalculator />
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <About data={landingPageData.About} />
