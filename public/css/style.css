@@ -459,8 +459,13 @@ header .intro-text {
 /* Testimonials Section */
 #testimonials {
   padding: 100px 0;
-  background: #f6f6f6;
+  /* background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%); */
+  background: linear-gradient(to right, #0f61b9 0%, #1a0429 100%);
+  color: #fff;
   margin-top: 50px;
+}
+#testimonials h2 {
+  color: #fff;
 }
 #testimonials i {
   color: #e6e6e6;
@@ -495,7 +500,7 @@ header .intro-text {
   margin-top: 10px;
   font-size: 15px;
   font-weight: 600;
-  color: #666;
+  color: rgb(230, 249, 168);
 }
 /* Team Section */
 #team {
