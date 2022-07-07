@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+
 import axios from "axios";
 import moment from "moment";
 import Swal from "sweetalert2";
@@ -159,13 +159,14 @@ export const Inquiry = (props) => {
                     {" "}
                     <label htmlFor="contact"> Contact: </label>
                     <input
-                      type="number"
+                      type="text"
                       id="contact"
                       value={contact}
                       name="contact"
                       className="form-control"
                       placeholder="eg: 1234567890"
                       required
+                      maxLength={10}
                       onChange={(e) => setContact(e.target.value)}
                     />
                     <p className="help-block text-danger"></p>
