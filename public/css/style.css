@@ -314,52 +314,123 @@ header .intro-text {
 /* About Section */
 #about {
   padding: 100px 0;
+  background: #f6f6f6;
+  margin-bottom: 50px;
 }
-#about h3 {
-  font-size: 22px;
-  margin: 0 0 20px;
+#about section {
+  padding-top: 50px;
+  display: block;
 }
-#about h2 {
-  position: relative;
+#about .about-section {
+  width: 100%;
+}
+#about .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+#about .about-overview {
+  padding: 15px;
+}
+#about .overview-inner {
+  padding: 30px;
+  background-color: rgb(220, 215, 222);
+  box-shadow: 0 10px 20px rgb(0 0 0/20%);
+  color: black;
+  padding-bottom: 180px;
+  padding-right: 100px;
+}
+#about .overview-title {
+  font-size: 32px;
+  color: black;
+  text-transform: uppercase;
   margin-bottom: 15px;
-  padding-bottom: 15px;
 }
-#about h2::after {
-  position: absolute;
+#about .about-mission {
+  padding: 15px;
+  padding-top: 200px;
+  padding-right: 50px;
+}
+#about .mission-inner {
+  padding: 30px;
+  padding-right: 30px;
+  padding-left: 0;
+  padding-top: 30px;
+  color: antiquewhite;
+  background-color: rgb(46, 102, 151);
+  box-shadow: 0 10px 20px rgb(0 0 0/20%);
+  position: relative;
+}
+#about .mission-inner::before {
   content: "";
-  /* background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%); */
-  background: linear-gradient(to right, #0f61b9 0%, #1a0429 100%);
-  height: 4px;
-  width: 80px;
-  bottom: 0;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  left: -49px;
+  background-color: rgb(46, 102, 151);
+  top: 0;
+  box-sizing: border-box;
+}
+#about .mission-inner h3 {
+  color: antiquewhite;
+  font-weight: bold;
+}
+#about .mission-inner p {
+  color: antiquewhite;
+}
+#about .about-vission {
+  padding: 15px;
+}
+#about .vission-inner {
+  background-color: rgb(9, 10, 8);
+  background-image: url("https://www.pcclean.io/wp-content/gallery/geely-cars-wallpapers/Geely-2.jpg");
+  padding: 80px 50px;
+  margin-top: -200px;
+  position: relative;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#about .vission-inner::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
   left: 0;
+  background-color: rgb(0, 0, 0, 0.85);
+  content: "";
+  box-sizing: border-box;
 }
-#about .about-text li {
-  margin-bottom: 6px;
-  margin-left: 6px;
-  list-style: none;
-  padding: 0;
+#about .vission-inner h3 {
+  color: antiquewhite;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
-#about .about-text li:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
-  color: #5ca9fb;
-
-  font-size: 11px;
-  font-weight: 300;
-  padding-right: 8px;
+#about .vission-inner p {
+  color: aliceblue;
+  position: relative;
+  z-index: 1;
+}
+#about .about-img .img {
+  position: relative;
+  z-index: 1;
 }
 #about img {
-  width: 520px;
-  margin-top: 10px;
-  background: #fff;
-  border-right: 0;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  max-width: 120%;
+  margin-top: -10%;
+  margin-left: -15%;
+  position: relative;
+  padding-bottom: 20%;
 }
-#about p {
-  line-height: 24px;
-  margin: 30px 0;
-}
+
 /* Services Section */
 #services {
   padding: 100px 0;
@@ -668,8 +739,16 @@ label {
 }
 
 @media (max-width: 768px) {
-  #about img {
-    margin: 50px 0;
+  #about .about-mission {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  #about .about-vission {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  #about .offset-lg-1 {
+    margin-left: 8.333333%;
   }
   #calculator form {
     margin-right: 250px;
@@ -678,7 +757,25 @@ label {
     margin-top: 5px;
   }
 }
-
+@media (min-width: 768px) {
+  #about .about-mission {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  #about .about-vission {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  #about .offset-lg-1 {
+    margin-left: 8.333333%;
+  }
+  #calculator form {
+    margin-right: 250px;
+  }
+  #calculator button {
+    margin-top: 5px;
+  }
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
