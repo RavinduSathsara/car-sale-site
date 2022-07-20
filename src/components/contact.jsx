@@ -34,7 +34,7 @@ export const Contact = (props) => {
     <div>
       <div id="contact">
         <div className="container">
-          <div className="col-md-8" style={{ marginLeft: "18rem" }}>
+          <div className="col-md-8">
             <div className="row">
               <div className="section-title">
                 <h2>Get In Touch</h2>
@@ -87,11 +87,7 @@ export const Contact = (props) => {
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                <button
-                  type="submit"
-                  className="btn btn-custom btn-lg"
-                  style={{ marginLeft: "28rem" }}
-                >
+                <button type="submit" className="btn btn-custom btn-lg">
                   Send Message
                 </button>
               </form>
