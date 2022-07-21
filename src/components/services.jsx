@@ -15,15 +15,15 @@ export const Services = (props) => {
                   <div className="service-desc">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
+                    {/* <a href="" target="_blank" to="/swap-deal">
+                      Swap Deal
+                      {d.link}
+                    </a> */}
                   </div>
                 </div>
               ))
             : "loading"}
         </div>
-        <p style={{ fontWeight: " bold", marginTop: "12px" }}>
-          For more details and access the services please fill the relevant form
-          for your convenience.
-        </p>
       </div>
     </div>
   );

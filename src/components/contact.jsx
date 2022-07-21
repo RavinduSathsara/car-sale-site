@@ -34,11 +34,11 @@ export const Contact = (props) => {
     <div>
       <div id="contact">
         <div className="container">
-          <div className="col-md-8">
+          <div className="col-md-12">
             <div className="row">
               <div className="section-title">
-                <h2>Get In Touch</h2>
-                <p>
+                <h2 style={{ marginLeft: 450, marginTop: 5 }}>Get In Touch</h2>
+                <p style={{ marginLeft: 290, marginTop: 50 }}>
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
                 </p>
@@ -81,13 +81,18 @@ export const Contact = (props) => {
                     className="form-control"
                     rows="4"
                     placeholder="Message"
+                    style={{ height: 100 }}
                     required
                     onChange={handleChange}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
+                <button
+                  type="submit"
+                  className="btn btn-custom btn-lg"
+                  style={{ marginLeft: 450 }}
+                >
                   Send Message
                 </button>
               </form>
@@ -95,15 +100,7 @@ export const Contact = (props) => {
           </div>
         </div>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63389.402015162326!2d79.90128984703962!3d6.789604093624152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24f91d281cc5d%3A0xea4b2fcd3ce0e74e!2sPiliyandala!5e0!3m2!1sen!2slk!4v1657287665149!5m2!1sen!2slk"
-        width="100%"
-        height="300"
-        style={{ border: 0, marginTop: 3 }}
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+
       <div id="footer" style={{ backgroundColor: "#dcdcdc" }}>
         <div className="container text-center">
           <div className="container ">
@@ -112,8 +109,10 @@ export const Contact = (props) => {
                 <div className="row">
                   <div className="footer-col">
                     <div className="col-md-3">
-                      <h4>Logo</h4>
-                      <h5>________________</h5>
+                      <h4 style={{ marginRight: 200 }}>Logo</h4>
+                      <h5 style={{ marginRight: 300, color: "darkblue" }}>
+                        ___________________
+                      </h5>
                       <ul>
                         <li>
                           <a href="#"></a>
@@ -122,14 +121,19 @@ export const Contact = (props) => {
                     </div>
                     <div className="footer-col">
                       <div className="col-md-3">
-                        <h4> Useful Links</h4>
-                        <h5>_____________</h5>
+                        <h4 style={{ marginRight: 150 }}> Useful Links</h4>
+                        <h5 style={{ marginRight: 150, color: "darkblue" }}>
+                          ___________________
+                        </h5>
                         <ul>
                           <p>
                             <a
                               href=""
                               className="service"
-                              style={{ color: "#0000cd" }}
+                              style={{
+                                color: "#0000cd",
+                                marginRight: 150,
+                              }}
                             >
                               Services
                             </a>
@@ -138,7 +142,7 @@ export const Contact = (props) => {
                             <a
                               href="#vehicles"
                               className="#"
-                              style={{ color: "#0000cd" }}
+                              style={{ color: "#0000cd", marginRight: 150 }}
                             >
                               Vehicles
                             </a>
@@ -146,23 +150,32 @@ export const Contact = (props) => {
                           <p>
                             <a
                               href="#testimonials"
-                              style={{ color: "#0000cd" }}
+                              style={{ color: "#0000cd", marginRight: 150 }}
                             >
                               Testmonials
                             </a>
                           </p>
                           <p>
-                            <a href="#team" style={{ color: "#0000cd" }}>
+                            <a
+                              href="#team"
+                              style={{ color: "#0000cd", marginRight: 150 }}
+                            >
                               Our Staff
                             </a>
                           </p>
                           <p>
-                            <a href="#about" style={{ color: "#0000cd" }}>
+                            <a
+                              href="#about"
+                              style={{ color: "#0000cd", marginRight: 150 }}
+                            >
                               About
                             </a>
                           </p>
                           <p>
-                            <a href="#about" style={{ color: "#0000cd" }}>
+                            <a
+                              href="#about"
+                              style={{ color: "#0000cd", marginRight: 150 }}
+                            >
                               Contact
                             </a>
                           </p>
@@ -171,78 +184,76 @@ export const Contact = (props) => {
                     </div>
                     <div className="footer-col">
                       <div className="col-md-3">
-                        <h4>Working hours</h4>
-                        <h5>___________________</h5>
+                        <h4 style={{ marginRight: 130 }}>Working hours</h4>
+                        <h5 style={{ marginRight: 130, color: "darkblue" }}>
+                          ____________________
+                        </h5>
                         <ul>
-                          <li style={{ marginleft: "5rem", color: "#0000cd" }}>
+                          <li
+                            style={{
+                              marginleft: "5rem",
+                              color: "#0000cd",
+                              marginRight: 120,
+                            }}
+                          >
                             Monday to Saturday
                           </li>
-                          <li style={{ color: "		#696969" }}>9am to 7pm </li>
+                          <li style={{ color: "		#696969", marginRight: 130 }}>
+                            9am to 6pm{" "}
+                          </li>
                           <br></br>
-                          <li style={{ color: "#0000cd" }}>
+                          <li style={{ color: "#0000cd", marginRight: 120 }}>
                             Sunday and Holidays
                           </li>
-                          <li style={{ color: "		#696969" }}>9am to 3pm</li>
+                          <li style={{ color: "		#696969", marginRight: 130 }}>
+                            9am to 3pm
+                          </li>
                           <br></br>
 
-                          <h4>Follow Us</h4>
-                          <h5>______________</h5>
-                          <div className="social">
-                            <a href={props.data ? props.data.facebook : "/"}>
-                              <i
-                                className="fa fa-facebook"
-                                style={{
-                                  marginRight: "1rem",
-                                  fontSize: "2rem",
-                                }}
-                              ></i>
-                            </a>
+                          <h4 style={{ marginRight: 130 }}>Contact Info</h4>
+                          <h5 style={{ marginRight: 130, color: "darkblue" }}>
+                            ____________________
+                          </h5>
+                          <p
+                            style={{
+                              color: "#0000cd",
+                              marginRight: 35,
+                            }}
+                          >
+                            Hotline - 077123456/0775226321
+                          </p>
 
-                            <a href={props.data ? props.data.twitter : "/"}>
-                              <i
-                                className="fa fa-twitter "
-                                style={{
-                                  marginRight: "1rem",
-                                  fontSize: "2rem",
-                                }}
-                              ></i>
-                            </a>
-
-                            <a href={props.data ? props.data.youtube : "/"}>
-                              <i
-                                className="fa fa-youtube"
-                                style={{
-                                  marginRight: "1rem",
-                                  fontSize: "2.5rem",
-                                }}
-                              ></i>
-                            </a>
-                          </div>
+                          <p
+                            style={{
+                              color: "#0000cd",
+                              marginRight: 100,
+                            }}
+                          >
+                            Landline - 0112736965
+                          </p>
+                          <p
+                            style={{
+                              color: "#0000cd",
+                              marginRight: 82,
+                            }}
+                          >
+                            Email - Binary@gmail.com
+                          </p>
                         </ul>
                       </div>
 
                       <div className="footer-col">
                         <div className="col-md-3">
-                          <h4>Contact Info</h4>
-                          <h5>_________________</h5>
-                          <ul>
-                            <p
-                              style={{ marginLeft: "4.7rem", color: "#0000cd" }}
-                            >
-                              Hotline - 077123456/0775226321
-                            </p>
-
-                            <p
-                              style={{ marginRight: "2rem", color: "#0000cd" }}
-                            >
-                              Landline - 0112736965
-                            </p>
-                            <p
-                              style={{ marginLeft: "0.3rem", color: "#0000cd" }}
-                            >
-                              Email - Binary@gmail.com
-                            </p>
-                          </ul>
+                          <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63389.402015162326!2d79.90128984703962!3d6.789604093624152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24f91d281cc5d%3A0xea4b2fcd3ce0e74e!2sPiliyandala!5e0!3m2!1sen!2slk!4v1657287665149!5m2!1sen!2slk"
+                            width="140%"
+                            height="340"
+                            style={{ border: 0, marginTop: 3, marginLeft: 20 }}
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                          ></iframe>
+                          <ul></ul>
                         </div>
                       </div>
                     </div>

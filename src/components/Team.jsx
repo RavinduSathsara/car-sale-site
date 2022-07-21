@@ -8,9 +8,9 @@ export const Team = (props) => {
       <div className="container">
         <div className="col-md-8 col-md-offset-2 section-title text-block">
           <h2>Meet our Staff</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+          <p style={{ fontWeight: 500, fontSize: 20, color: "darkblack" }}>
+            Our team is staffed with trained experts and vehicles specialists
+            who know how important your time and money are.
           </p>
         </div>
         <div id="row">

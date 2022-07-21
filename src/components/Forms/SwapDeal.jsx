@@ -121,10 +121,12 @@ const SwapDeal = () => {
                 <div style={{ marginLeft: "50px" }}>
                   <h2>Description</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ullam sint, consectetur facere ex sapiente, asperiores,
-                    dolorem velit minima eos animi vel! Est exercitationem
-                    temporibus facilis excepturi iure aut atque ipsa?
+                    At CarSwap, it is our goal to give you the ultimate car
+                    buying experience. We will always find the car that works
+                    best for your needs, and we will make sure you get the right
+                    deal. Getting you all the information needed in a friendly
+                    environment is the easiest part of our job. Whether you are
+                    buying or selling make CarSwap your first stop
                   </p>
                 </div>
               </div>

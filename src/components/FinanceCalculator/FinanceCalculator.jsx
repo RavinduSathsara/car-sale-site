@@ -17,7 +17,7 @@ const FinanceCalculator = () => {
 
   return (
     <>
-      <div id="calculator" style={{ marginTop: "40px" }}>
+      <div id="calculator" style={{ marginTop: "20px" }}>
         <div className="container  ">
           <div className="col-xs-12 col-md-12">
             <div className="row ">
@@ -26,7 +26,7 @@ const FinanceCalculator = () => {
               <div className="row ">
                 <form
                   onSubmit={handleSubmit}
-                  style={{ marginTop: "5px", marginLeft: "280px" }}
+                  style={{ marginTop: "25px", marginLeft: "280px" }}
                 >
                   <div className="row">
                     <div className="col-md-4  ">
@@ -124,7 +124,7 @@ const FinanceCalculator = () => {
                         type="submit"
                         className="btn"
                         onClick={() => handleSubmit}
-                        style={{ marginTop: "3px" }}
+                        style={{ marginTop: "3px", marginLeft: "195px" }}
                       >
                         Calculate
                       </button>
@@ -133,7 +133,7 @@ const FinanceCalculator = () => {
                       <button
                         type="reset"
                         className="btn"
-                        style={{ marginTop: "3px", marginLeft: "15px" }}
+                        style={{ marginTop: "3px", marginLeft: "215px" }}
                       >
                         Reset
                       </button>

@@ -35,6 +35,14 @@ h5 {
   font-weight: 700;
   line-height: 20px;
 }
+h6 {
+  text-transform: uppercase;
+  font-weight: 550;
+  font-size: 15px;
+  color: black;
+  margin-left: 10px;
+  line-height: 20px;
+}
 p {
   font-size: 15px;
 }
@@ -223,7 +231,6 @@ a:focus,
   padding: 0;
   /* background: url(../img/intro-bg.jpg) center center no-repeat; */
   background: url(../img/c.jpg) center center no-repeat;
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
