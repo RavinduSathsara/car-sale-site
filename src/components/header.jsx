@@ -22,7 +22,7 @@ export const Header = (props) => {
             <img
               src="https://images.unsplash.com/photo-1657299156537-f4bcdced5392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="Los Angeles"
-              style={{ width: "100%", height: "80%" }}
+              style={{ width: "100%" }}
             />
           </div>
 
@@ -34,7 +34,7 @@ export const Header = (props) => {
             <img
               src="https://images.unsplash.com/photo-1553699357-b454793abefa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="Chicago"
-              style={{ width: "100%", height: "80%" }}
+              style={{ width: "100%" }}
             />
           </div>
 
@@ -46,7 +46,7 @@ export const Header = (props) => {
             <img
               src="https://images.unsplash.com/photo-1658351984016-dda2025086de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="New york"
-              style={{ width: "100%", height: "80%" }}
+              style={{ width: "100%" }}
             />
           </div>
         </div>
