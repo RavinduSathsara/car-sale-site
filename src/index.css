@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.img {
+  -webkit-filter: blur(1.5px); /* Safari 6.0 - 9.0 */
+  filter: blur(1.5px);
+}

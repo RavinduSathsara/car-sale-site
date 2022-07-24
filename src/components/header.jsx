@@ -11,13 +11,23 @@ export const Header = (props) => {
           ></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
         <div className="carousel-inner">
           <div className="item active">
             <div className="carousel-caption">
-              <h2 style={{ textAlign: "left" }}>Engineered Beyond Tough</h2>
-              <h2 style={{ textAlign: "right" }}>Elegance And Attention</h2>
+              <section class="text-center">
+                <div>
+                  <h1>GET YOUR DREAM VEHICLE</h1>
+
+                  <p>
+                    We are the exclusive dealer / distributor for the Many
+                    brands in Sri Lanka and a fully owned subsidiary of Vehicle
+                    Solution(Pvt Ltd), Sri lanka.
+                  </p>
+                </div>
+              </section>
             </div>
             <img
               src="../img/c.jpg"
@@ -28,7 +38,7 @@ export const Header = (props) => {
 
           <div className="item">
             <div className="carousel-caption">
-              <h1>Everything And A Little More</h1>
+              <h2>Everything And A Little More</h2>
             </div>
             <img
               src="../img/intro-bg.jpg"
@@ -47,16 +57,16 @@ export const Header = (props) => {
               </h2>
             </div>
             <img
+              //
               src="../img/carosal2.jpg"
               alt="Carosal 3"
               style={{ height: "700px", width: "100%" }}
             />
           </div>
           <div className="item">
-            <div className="carousel-caption">
-              <h1>GET YOUR DREAM VEHICLE</h1>
-            </div>
+            <div className="carousel-caption"></div>
             <img
+              //
               src="../img/carosal4.jpg"
               alt="Carosal 4"
               style={{ height: "700px", width: "100%" }}
