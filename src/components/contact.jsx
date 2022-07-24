@@ -1,5 +1,7 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import axios from "axios";
+import Swal from "sweetalert2";
+import logo from "../dist/img/fullllogo.png";
 
 const initialState = {
   name: "",
@@ -7,28 +9,43 @@ const initialState = {
   message: "",
 };
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-  const clearState = () => setState({ ...initialState });
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    try {
+      const results = axios.post("http://127.0.0.1:8000/api/messages", {
+        name: `${name}`,
+        email: `${email}`,
+        message: `${message}`,
+      });
+
+      if (results) {
+        setEmail("");
+        setMessage("");
+        setName("");
+
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your Review Sent.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
   return (
     <div>
@@ -39,8 +56,8 @@ export const Contact = (props) => {
               <div className="section-title">
                 <h2 style={{ marginLeft: 450, marginTop: 5 }}>Get In Touch</h2>
                 <p style={{ marginLeft: 290, marginTop: 50 }}>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  Please fill out the form below to send us an Review and Thank
+                  you for your Response.
                 </p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
@@ -50,11 +67,11 @@ export const Contact = (props) => {
                       <input
                         type="text"
                         id="name"
-                        name="name"
+                        value={name}
                         className="form-control"
                         placeholder="Name"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => setName(e.target.value)}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -64,11 +81,11 @@ export const Contact = (props) => {
                       <input
                         type="email"
                         id="email"
-                        name="email"
+                        value={email}
                         className="form-control"
                         placeholder="Email"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -76,14 +93,14 @@ export const Contact = (props) => {
                 </div>
                 <div className="form-group">
                   <textarea
-                    name="message"
+                    value={message}
                     id="message"
                     className="form-control"
                     rows="4"
                     placeholder="Message"
                     style={{ height: 100 }}
                     required
-                    onChange={handleChange}
+                    onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
@@ -109,15 +126,11 @@ export const Contact = (props) => {
                 <div className="row">
                   <div className="footer-col">
                     <div className="col-md-3">
-                      <h4 style={{ marginRight: 200 }}>Logo</h4>
-                      <h5 style={{ marginRight: 300, color: "darkblue" }}>
-                        ___________________
-                      </h5>
-                      <ul>
-                        <li>
-                          <a href="#"></a>
-                        </li>
-                      </ul>
+                      <img
+                        src={logo}
+                        width="200px"
+                        style={{ marginRight: 300 }}
+                      />
                     </div>
                     <div className="footer-col">
                       <div className="col-md-3">
@@ -237,7 +250,7 @@ export const Contact = (props) => {
                               marginRight: 82,
                             }}
                           >
-                            Email - Binary@gmail.com
+                            Email - vehiclesolution345@gmail.com
                           </p>
                         </ul>
                       </div>
