@@ -28,7 +28,7 @@ export const Header = (props) => {
 
           <div className="item">
             <div className="carousel-caption">
-              <h1>Everything And A Little More</h1>
+              <h2>Everything And A Little More</h2>
             </div>
             <img
               src="../img/intro-bg.jpg"
@@ -54,9 +54,7 @@ export const Header = (props) => {
             />
           </div>
           <div className="item">
-            <div className="carousel-caption">
-              <h1>GET YOUR DREAM VEHICLE</h1>
-            </div>
+            <div className="carousel-caption"></div>
             <img
               //
               src="../img/carosal4.jpg"
