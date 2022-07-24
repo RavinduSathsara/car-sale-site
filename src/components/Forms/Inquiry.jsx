@@ -323,7 +323,7 @@ export const Inquiry = (props) => {
                       value={insurance}
                       name="insurance"
                       className="form-control"
-                      placeholder="Insurance"
+                      placeholder="eg: Full Option"
                       required
                       onChange={(e) => setInsurance(e.target.value)}
                     />
