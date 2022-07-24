@@ -312,23 +312,6 @@ const TestRun = () => {
                           <p className="help-block text-danger"></p>
                         </div>
                       </div>
-                      {/* <div className="col-md-12">
-                        <div className="form-group">
-                          {" "}
-                          <label htmlFor="ownership"> Ownership: </label>
-                          <input
-                            type="text"
-                            id="ownership"
-                            name="ownership"
-                            className="form-control"
-                            placeholder="eg: First Owner"
-                            required
-                            value={ownership}
-                            onChange={(e) => setOwnership(e.target.value)}
-                          />
-                          <p className="help-block text-danger"></p>
-                        </div> */}
-                      {/* </div> */}
                     </div>
                   </div>
                 </div>
