@@ -519,7 +519,7 @@ const SwapDeal = () => {
                           </label>
                           <input
                             required
-                            type="text"
+                            type="number"
                             id="yearManufacture"
                             name="yearManufacture"
                             className="form-control"
