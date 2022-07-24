@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import logo from "../dist/img/fullllogo.png";
 
 const initialState = {
   name: "",
@@ -55,8 +56,8 @@ export const Contact = (props) => {
               <div className="section-title">
                 <h2 style={{ marginLeft: 450, marginTop: 5 }}>Get In Touch</h2>
                 <p style={{ marginLeft: 290, marginTop: 50 }}>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  Please fill out the form below to send us an Review and Thank
+                  you for your Response.
                 </p>
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
@@ -125,15 +126,11 @@ export const Contact = (props) => {
                 <div className="row">
                   <div className="footer-col">
                     <div className="col-md-3">
-                      <h4 style={{ marginRight: 200 }}>Logo</h4>
-                      <h5 style={{ marginRight: 300, color: "darkblue" }}>
-                        ___________________
-                      </h5>
-                      <ul>
-                        <li>
-                          <a href="#"></a>
-                        </li>
-                      </ul>
+                      <img
+                        src={logo}
+                        width="200px"
+                        style={{ marginRight: 300 }}
+                      />
                     </div>
                     <div className="footer-col">
                       <div className="col-md-3">
@@ -253,7 +250,7 @@ export const Contact = (props) => {
                               marginRight: 82,
                             }}
                           >
-                            Email - Binary@gmail.com
+                            Email - vehiclesolution345@gmail.com
                           </p>
                         </ul>
                       </div>
