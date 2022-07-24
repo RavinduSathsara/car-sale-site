@@ -16,46 +16,49 @@ export const Header = (props) => {
         <div className="carousel-inner">
           <div className="item active">
             <div className="carousel-caption">
-              <h1>GET YOUR DREAM VEHICLE</h1>
-              <p>
-                Choose your dream vehicle according to your own requirements
-                from us.
-              </p>
+              <h2 style={{ textAlign: "left" }}>Engineered Beyond Tough</h2>
+              <h2 style={{ textAlign: "right" }}>Elegance And Attention</h2>
             </div>
             <img
               src="../img/c.jpg"
-              alt="Los Angeles"
+              alt="Carosal 1"
               style={{ height: "700px", width: "100%" }}
             />
           </div>
 
           <div className="item">
             <div className="carousel-caption">
-              <h1>GET YOUR DREAM VEHICLE</h1>
-
-              <p>
-                Choose your dream vehicle according to your own requirements
-                from us.
-              </p>
+              <h1>Everything And A Little More</h1>
             </div>
             <img
               src="../img/intro-bg.jpg"
-              alt="Chicago"
+              alt="Carosal 2"
               style={{ height: "700px", width: "100%" }}
             />
           </div>
 
           <div className="item">
             <div className="carousel-caption">
-              <h1>GET YOUR DREAM VEHICLE</h1>
-              <p>
-                Choose your dream vehicle according to your own requirements
-                from us.
-              </p>
+              <h2 style={{ textAlign: "left", color: "white" }}>
+                Explore Your Possibilities
+              </h2>
+              <h2 style={{ textAlign: "right", color: "white" }}>
+                Elevate Your Journey
+              </h2>
             </div>
             <img
-              src="../img/b.jpg"
-              alt="New york"
+              src="../img/carosal2.jpg"
+              alt="Carosal 3"
+              style={{ height: "700px", width: "100%" }}
+            />
+          </div>
+          <div className="item">
+            <div className="carousel-caption">
+              <h1>GET YOUR DREAM VEHICLE</h1>
+            </div>
+            <img
+              src="../img/carosal4.jpg"
+              alt="Carosal 4"
               style={{ height: "700px", width: "100%" }}
             />
           </div>

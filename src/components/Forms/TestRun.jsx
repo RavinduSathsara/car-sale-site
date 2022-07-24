@@ -64,14 +64,14 @@ const TestRun = () => {
       <div id="contact">
         <div className="section-tittle" style={{ textAlign: "center" }}>
           <p style={{ fontWeight: "bold", fontSize: "4rem", marginTop: "1px" }}>
-            TEST RUN
+            TEST DRIVE
           </p>
         </div>
         <div className="container">
           <div className="row" style={{ marginTop: "30px" }}>
             <div className="col-xs-12 col-md-6">
               <img
-                src="img/testdrive.jpg"
+                src="img/TestDrive.jpeg"
                 className="img-responsive"
                 alt=""
                 style={{ borderRadius: "30px" }}
