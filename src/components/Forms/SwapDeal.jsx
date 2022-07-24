@@ -65,6 +65,27 @@ const SwapDeal = () => {
           confirmButtonText: "Yes, Decline",
         });
       });
+    setName("");
+    setEmail("");
+    setContact("");
+    setProfession("");
+    setAddress("");
+    setCusMake("");
+    setCusBrand("");
+    setCusModel("");
+    setCusYearManufacture("");
+    setYearRegistration("");
+    setCusOwnership("");
+    setChassisNo("");
+    setCusFuelType("");
+    setMileage("");
+    setRemark("");
+    setBrand("");
+    setModel("");
+    setMake("");
+    setOwnership("");
+    setYearManufacture("");
+    setFuelType("");
   };
   const handleReset = (event) => {
     event.preventDefault();
