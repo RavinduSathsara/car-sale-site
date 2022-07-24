@@ -1,5 +1,6 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const initialState = {
   name: "",
@@ -7,28 +8,43 @@ const initialState = {
   message: "",
 };
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
-  };
-  const clearState = () => setState({ ...initialState });
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-      .then(
-        (result) => {
-          console.log(result.text);
-          clearState();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    try {
+      const results = axios.post("http://127.0.0.1:8000/api/messages", {
+        name: `${name}`,
+        email: `${email}`,
+        message: `${message}`,
+      });
+
+      if (results) {
+        setEmail("");
+        setMessage("");
+        setName("");
+
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your Review Sent.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
   };
   return (
     <div>
@@ -50,11 +66,11 @@ export const Contact = (props) => {
                       <input
                         type="text"
                         id="name"
-                        name="name"
+                        value={name}
                         className="form-control"
                         placeholder="Name"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => setName(e.target.value)}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -64,11 +80,11 @@ export const Contact = (props) => {
                       <input
                         type="email"
                         id="email"
-                        name="email"
+                        value={email}
                         className="form-control"
                         placeholder="Email"
                         required
-                        onChange={handleChange}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                       <p className="help-block text-danger"></p>
                     </div>
@@ -76,14 +92,14 @@ export const Contact = (props) => {
                 </div>
                 <div className="form-group">
                   <textarea
-                    name="message"
+                    value={message}
                     id="message"
                     className="form-control"
                     rows="4"
                     placeholder="Message"
                     style={{ height: 100 }}
                     required
-                    onChange={handleChange}
+                    onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
