@@ -69,23 +69,22 @@
     {
       "icon": "fa fa-phone-square",
       "name": "Vehicle Inquiries",
-      "text": "You can get the details of a registered vehicle through this service.  "
+      "text": "You can get the details of a registered vehicle through this service.  ",
+      "link": "/Inquiry"
     },
-    {
-      "icon": "fa fa-book",
-      "name": "Insurance",
-      "text": "You can choose your best vehicle insurance plan with us."
-    },
+
     {
       "icon": "fa fa-exchange",
       "name": "Swap Deals",
-      "text": "You can exchange your old vehicle with our brand new one."
+      "text": "You can exchange your old vehicle with our brand new one.",
+      "link": "/swap-deal"
     },
-    {},
+
     {
       "icon": "fa fa-car",
       "name": "Test Run",
-      "text": "If you are thinking about buying your new vehicle, you can get a test drive from us."
+      "text": "If you are thinking about buying your new vehicle, you can get a test drive from us.",
+      "link": "/test-run"
     }
   ],
   "Testimonials": [

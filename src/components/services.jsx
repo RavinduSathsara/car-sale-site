@@ -1,4 +1,16 @@
+import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
+
 export const Services = (props) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
   return (
     <div id="services" className="text-center text-block">
       <div className="container text-upper">
@@ -10,20 +22,28 @@ export const Services = (props) => {
           {props.data
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className="col-md-4">
-                  {" "}
-                  <i className={d.icon}></i>
+                  <Link target="_blank" to={d.link}>
+                    <i
+                      style={{
+                        color: isHovering ? "darkblue" : "",
+                      }}
+                      className={d.icon}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    ></i>
+                  </Link>
                   <div className="service-desc">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
+                    {/* <Link href="" target="_blank" to={d.link}>
+                      {d.name}
+                    </Link> */}
                   </div>
                 </div>
               ))
             : "loading"}
         </div>
-        <p style={{ fontWeight: " bold", marginTop: "12px" }}>
-          For more details and access the services please fill the relevant form
-          for your convenience.
-        </p>
+        <Outlet />
       </div>
     </div>
   );

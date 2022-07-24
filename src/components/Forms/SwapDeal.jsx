@@ -121,10 +121,10 @@ const SwapDeal = () => {
                 <div style={{ marginLeft: "50px" }}>
                   <h2>Description</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ullam sint, consectetur facere ex sapiente, asperiores,
-                    dolorem velit minima eos animi vel! Est exercitationem
-                    temporibus facilis excepturi iure aut atque ipsa?
+                    At CarSwap, it is our goal to give you the ultimate car
+                    buying experience. We will always find the car that works
+                    best for your needs, and we will make sure you get the right
+                    deal.
                   </p>
                 </div>
               </div>
@@ -423,107 +423,111 @@ const SwapDeal = () => {
                 </div>
                 <div className="contact-item" style={{ marginTop: "43px" }}>
                   <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="brand">Brand</label>
-                        <input
-                          type="text"
-                          id="brand"
-                          name="brand"
-                          className="form-control"
-                          placeholder="eg: Toyota"
-                          required
-                          value={brand}
-                          onChange={(e) => setBrand(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="make">Make</label>
+                          <input
+                            type="text"
+                            id="make"
+                            name="make"
+                            className="form-control"
+                            placeholder="eg: Car"
+                            required
+                            value={make}
+                            onChange={(e) => setMake(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="brand">Brand</label>
+                          <input
+                            type="text"
+                            id="brand"
+                            name="brand"
+                            className="form-control"
+                            placeholder="eg: Toyota"
+                            required
+                            value={brand}
+                            onChange={(e) => setBrand(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="model">Model</label>
+                          <input
+                            type="text"
+                            id="model"
+                            name="model"
+                            className="form-control"
+                            placeholder="eg: Prius"
+                            required
+                            value={model}
+                            onChange={(e) => setModel(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
                       </div>
                     </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="model">Model</label>
-                        <input
-                          type="text"
-                          id="model"
-                          name="model"
-                          className="form-control"
-                          placeholder="eg: Prius"
-                          required
-                          value={model}
-                          onChange={(e) => setModel(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="ownership">Ownership</label>
+                          <input
+                            type="text"
+                            id="ownership"
+                            name="ownership"
+                            className="form-control"
+                            placeholder="eg: First Owner"
+                            required
+                            value={ownership}
+                            onChange={(e) => setOwnership(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
                       </div>
                     </div>
-                  </div>{" "}
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="make">Make</label>
-                        <input
-                          type="text"
-                          id="make"
-                          name="make"
-                          className="form-control"
-                          placeholder="eg: Car"
-                          required
-                          value={make}
-                          onChange={(e) => setMake(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="fuelType">Fuel Type</label>
+                          <input
+                            type="text"
+                            id="fuelType"
+                            name="fuelType"
+                            className="form-control"
+                            placeholder="eg: Petrol"
+                            required
+                            value={fuelType}
+                            onChange={(e) => setFuelType(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
                       </div>
                     </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="ownership">Ownership</label>
-                        <input
-                          type="text"
-                          id="ownership"
-                          name="ownership"
-                          className="form-control"
-                          placeholder="eg: First Owner"
-                          required
-                          value={ownership}
-                          onChange={(e) => setOwnership(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="fuelType">Fuel Type</label>
-                        <input
-                          type="text"
-                          id="fuelType"
-                          name="fuelType"
-                          className="form-control"
-                          placeholder="eg: Petrol"
-                          required
-                          value={fuelType}
-                          onChange={(e) => setFuelType(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label htmlFor="yearManufacture">
-                          Year Manufacture
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          id="yearManufacture"
-                          name="yearManufacture"
-                          className="form-control"
-                          placeholder="eg: 2000"
-                          maxLength={4}
-                          value={yearManufacture}
-                          onChange={(e) => setYearManufacture(e.target.value)}
-                        />
-                        <p className="help-block text-danger"></p>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <label htmlFor="yearManufacture">
+                            Year Manufacture
+                          </label>
+                          <input
+                            required
+                            type="text"
+                            id="yearManufacture"
+                            name="yearManufacture"
+                            className="form-control"
+                            placeholder="eg: 2000"
+                            maxLength={4}
+                            value={yearManufacture}
+                            onChange={(e) => setYearManufacture(e.target.value)}
+                          />
+                          <p className="help-block text-danger"></p>
+                        </div>
                       </div>
                     </div>
                   </div>

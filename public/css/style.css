@@ -35,6 +35,14 @@ h5 {
   font-weight: 700;
   line-height: 20px;
 }
+h6 {
+  text-transform: uppercase;
+  font-weight: 550;
+  font-size: 15px;
+  color: black;
+  margin-left: 10px;
+  line-height: 20px;
+}
 p {
   font-size: 15px;
 }
@@ -217,22 +225,22 @@ a:focus,
 }
 /* Header Section */
 
-.intro {
+/* .carousel {
   display: table;
   width: 100%;
+  height: 20px;
   padding: 0;
   /* background: url(../img/intro-bg.jpg) center center no-repeat; */
-  background: url(../img/c.jpg) center center no-repeat;
-
+/* background: url(../img/c.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-}
-.intro .overlay {
+} */
+*/ .carousel .overlay {
   background: rgba(0, 0, 0, 0.2);
 }
-.intro h1 {
+.carousel h1 {
   font-family: "Raleway", sans-serif;
   color: rgb(53, 53, 53);
   -webkit-text-stroke: 2px rgb(240, 230, 230);
@@ -243,11 +251,11 @@ a:focus,
   text-shadow: 0 0 6px #002d33;
   margin-top: -150px;
 }
-.intro h1 span {
+.carousel h1 span {
   font-weight: 800;
   color: #5ca9fb;
 }
-.intro p {
+.carousel p {
   /* color: rgb(20, 19, 19); */
   color: white;
   text-shadow: 2px 2px #171515;
@@ -257,7 +265,7 @@ a:focus,
   margin: 0 auto;
   margin-bottom: 10px;
 }
-header .intro-text {
+header .carousel {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
@@ -587,6 +595,7 @@ header .intro-text {
   padding: 10px 0 0;
   color: #888;
 }
+
 /* Contact Section */
 
 #contact {

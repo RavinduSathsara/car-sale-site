@@ -16,18 +16,26 @@ export const Features = (props) => {
         {" "}
         <div className="row">
           <div className="col-md-10 col-md-offset-1 section-title">
-            <h2>Why</h2>
+            <h2>Why Chose Vehicle Solution:</h2>
             <div className="col-xs-12 col-md-6" style={{ marginTop: "15px" }}>
               {" "}
               <img src="img/cars.jpg" className="img-responsive" alt="" />{" "}
             </div>{" "}
             <div className="col-xs-12 col-md-6" style={{ marginTop: "15px" }}>
               <h6>
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                qui voluptatem dignissimos! Et accusantium quis veritatis.
-                Suscipit et vel beatae sunt debitis necessitatibus ducimus
-                obcaecati. Cupiditate deserunt officia dolore ullam.
+                {/* {" "} */}
+                When investing in a vehicle for yourself or your family, your
+                lifestyle aspirations play an important role in deciding which
+                vehicle to buy. At Vehicle Solution, we have identified a range
+                of personal vehicles that promise to meet the demanding
+                lifestyles of Sri Lankans today.
+                <h6>
+                  We focus on not only thenreliability of vehicles, but also the
+                  manufacturer’s reputation to bring you high performing, fuel
+                  efficient and affordable personal vehicles, enabling you to
+                  make a well-informed, smart purchasing decision that meets
+                  your needs as well as your budget.
+                </h6>
               </h6>
             </div>
           </div>
