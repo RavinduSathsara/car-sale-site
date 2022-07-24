@@ -11,13 +11,23 @@ export const Header = (props) => {
           ></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
         <div className="carousel-inner">
           <div className="item active">
             <div className="carousel-caption">
-              <h2 style={{ textAlign: "left" }}>Engineered Beyond Tough</h2>
-              <h2 style={{ textAlign: "right" }}>Elegance And Attention</h2>
+              <section class="text-center">
+                <div>
+                  <h1>GET YOUR DREAM VEHICLE</h1>
+
+                  <p>
+                    We are the exclusive dealer / distributor for the Many
+                    brands in Sri Lanka and a fully owned subsidiary of Vehicle
+                    Solution(Pvt Ltd), Sri lanka.
+                  </p>
+                </div>
+              </section>
             </div>
             <img
               src="../img/c.jpg"
