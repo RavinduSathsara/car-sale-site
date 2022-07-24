@@ -47,6 +47,7 @@ export const Header = (props) => {
               </h2>
             </div>
             <img
+              //
               src="../img/carosal2.jpg"
               alt="Carosal 3"
               style={{ height: "700px", width: "100%" }}
@@ -57,6 +58,7 @@ export const Header = (props) => {
               <h1>GET YOUR DREAM VEHICLE</h1>
             </div>
             <img
+              //
               src="../img/carosal4.jpg"
               alt="Carosal 4"
               style={{ height: "700px", width: "100%" }}
