@@ -16,37 +16,47 @@ export const Header = (props) => {
         <div className="carousel-inner">
           <div className="item active">
             <div className="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
+              <h1>GET YOUR DREAM VEHICLE</h1>
+              <p>
+                Choose your dream vehicle according to your own requirements
+                from us.
+              </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1657299156537-f4bcdced5392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src="../img/c.jpg"
               alt="Los Angeles"
-              style={{ width: "100%" }}
+              style={{ height: "700px", width: "100%" }}
             />
           </div>
 
           <div className="item">
             <div className="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
+              <h1>GET YOUR DREAM VEHICLE</h1>
+
+              <p>
+                Choose your dream vehicle according to your own requirements
+                from us.
+              </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1553699357-b454793abefa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src="../img/intro-bg.jpg"
               alt="Chicago"
-              style={{ width: "100%" }}
+              style={{ height: "700px", width: "100%" }}
             />
           </div>
 
           <div className="item">
             <div className="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
+              <h1>GET YOUR DREAM VEHICLE</h1>
+              <p>
+                Choose your dream vehicle according to your own requirements
+                from us.
+              </p>
             </div>
             <img
-              src="https://images.unsplash.com/photo-1658351984016-dda2025086de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src="../img/b.jpg"
               alt="New york"
-              style={{ width: "100%" }}
+              style={{ height: "700px", width: "100%" }}
             />
           </div>
         </div>
@@ -56,7 +66,6 @@ export const Header = (props) => {
           href="#myCarousel"
           data-slide="prev"
         >
-          <span className="glyphicon glyphicon-chevron-left"></span>
           <span className="sr-only">Previous</span>
         </a>
         <a
@@ -64,7 +73,6 @@ export const Header = (props) => {
           href="#myCarousel"
           data-slide="next"
         >
-          <span className="glyphicon glyphicon-chevron-right"></span>
           <span className="sr-only">Next</span>
         </a>
       </div>

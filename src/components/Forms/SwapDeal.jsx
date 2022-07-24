@@ -65,6 +65,27 @@ const SwapDeal = () => {
           confirmButtonText: "Yes, Decline",
         });
       });
+    setName("");
+    setEmail("");
+    setContact("");
+    setProfession("");
+    setAddress("");
+    setCusMake("");
+    setCusBrand("");
+    setCusModel("");
+    setCusYearManufacture("");
+    setYearRegistration("");
+    setCusOwnership("");
+    setChassisNo("");
+    setCusFuelType("");
+    setMileage("");
+    setRemark("");
+    setBrand("");
+    setModel("");
+    setMake("");
+    setOwnership("");
+    setYearManufacture("");
+    setFuelType("");
   };
   const handleReset = (event) => {
     event.preventDefault();
@@ -124,9 +145,7 @@ const SwapDeal = () => {
                     At CarSwap, it is our goal to give you the ultimate car
                     buying experience. We will always find the car that works
                     best for your needs, and we will make sure you get the right
-                    deal. Getting you all the information needed in a friendly
-                    environment is the easiest part of our job. Whether you are
-                    buying or selling make CarSwap your first stop
+                    deal.
                   </p>
                 </div>
               </div>
